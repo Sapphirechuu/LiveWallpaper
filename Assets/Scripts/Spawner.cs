@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
             int rand = Random.Range(0, objectToSpawn.Count);
             GameObject spawned = Instantiate(objectToSpawn[rand], gameObject.transform);
             //spawned.GetComponent<PokemonData>().seen = true;
-            //Debug.Log(spawned.name);
+            Debug.Log(spawned.name);
             //if (Input.GetKey(KeyCode.Space))
             //{
             //    spawned.GetComponent<PokemonData>().captured = true;
