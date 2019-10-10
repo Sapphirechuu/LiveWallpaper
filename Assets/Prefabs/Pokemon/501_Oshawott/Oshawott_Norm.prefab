@@ -12,6 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc865f26a535fc646bd9eeedfe92673e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6980624497175454993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540703906896390765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdb25a872f080746b98e3a829adad4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rarity: 4
+  shiny: 0
+  pokeNum: 501
+  seen: 0
+  captured: 0
 --- !u!1001 &3018769213299815268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37,7 +54,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bf099db7c6487ce49854cadf04246016,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bf099db7c6487ce49854cadf04246016,
         type: 3}
