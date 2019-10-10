@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc865f26a535fc646bd9eeedfe92673e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
+  target: {fileID: 0}
+  speed: 20
 --- !u!114 &3716549413001087525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,8 +30,6 @@ MonoBehaviour:
   rarity: 4
   shiny: 0
   pokeNum: 23
-  seen: 0
-  captured: 0
 --- !u!1001 &2644445010776322150
 PrefabInstance:
   m_ObjectHideFlags: 0

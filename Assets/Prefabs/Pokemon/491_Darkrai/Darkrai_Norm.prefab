@@ -15,8 +15,6 @@ MonoBehaviour:
   rarity: 1
   shiny: 0
   pokeNum: 491
-  seen: 0
-  captured: 0
 --- !u!114 &2112833314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,6 +27,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc865f26a535fc646bd9eeedfe92673e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
+  target: {fileID: 0}
+  speed: 20
 --- !u!1001 &7192533347680842248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46,11 +47,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: d47873f7bbd3de94ba886f9297db01d5,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 27e9cb7ea125ea04b9e0ac0440adfa75, type: 2}
     - target: {fileID: -4216859302048453862, guid: d47873f7bbd3de94ba886f9297db01d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -121,6 +117,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: d47873f7bbd3de94ba886f9297db01d5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 27e9cb7ea125ea04b9e0ac0440adfa75, type: 2}
     - target: {fileID: 3715416560202282816, guid: d47873f7bbd3de94ba886f9297db01d5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

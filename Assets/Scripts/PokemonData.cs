@@ -14,8 +14,4 @@ public class PokemonData : MonoBehaviour
     public bool shiny;
     //Pokedex Number of the Pokemon
     public int pokeNum;
-    //Is it seen?
-    public bool seen;
-    //Is it captured
-    public bool captured;
 }
