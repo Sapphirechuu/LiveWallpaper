@@ -30,9 +30,10 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= timeBetween)
+        //timer += Time.deltaTime;
+        if (/*timer >= timeBetween*/transform.childCount == 0)
         {
+            //Add Timer here to do CHANCE of spawn every second after the last pokemon is destoryed
             int rand = Random.Range(0, objectToSpawn.Count);
             GameObject spawned = Instantiate(objectToSpawn[rand], gameObject.transform);
             //spawned.GetComponent<PokemonData>().seen = true;
