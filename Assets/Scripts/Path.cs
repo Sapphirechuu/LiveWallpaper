@@ -26,7 +26,7 @@ public class Path : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
+        //Debug.Log(other.gameObject);
         if (other.transform == target)
         {
             Destroy(gameObject);
