@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8497469681761370625}
   - component: {fileID: 1596868397988097440}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Cubone_Norm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   target: {fileID: 0}
-  speed: 20
+  speed: 9
 --- !u!65 &8497469681761370625
 BoxCollider:
   m_ObjectHideFlags: 0
