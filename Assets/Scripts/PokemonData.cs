@@ -14,4 +14,6 @@ public class PokemonData : MonoBehaviour
     public bool shiny;
     //Pokedex Number of the Pokemon
     public int pokeNum;
+
+    public GameObject shinyPrefab = null;
 }

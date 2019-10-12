@@ -35,7 +35,24 @@ public class Spawner : MonoBehaviour
         {
             //Add Timer here to do CHANCE of spawn every second after the last pokemon is destoryed
             int rand = Random.Range(0, objectToSpawn.Count);
-            GameObject spawned = Instantiate(objectToSpawn[rand], gameObject.transform);
+            GameObject spawned = objectToSpawn[rand];
+            int randShiny = Random.Range(0, 8192);
+            if (randShiny == 888)
+            {
+                Debug.Log("Shiny");
+                if (spawned.GetComponent<PokemonData>().shinyPrefab != null)
+                {
+                    Instantiate(spawned.GetComponent<PokemonData>().shinyPrefab);
+                }
+                else
+                {
+                    Instantiate(spawned, gameObject.transform);
+                }
+            }
+            else
+            {
+                Instantiate(spawned, gameObject.transform);
+            }
             //spawned.GetComponent<PokemonData>().seen = true;
             Debug.Log(spawned.name);
             //if (Input.GetKey(KeyCode.Space))
