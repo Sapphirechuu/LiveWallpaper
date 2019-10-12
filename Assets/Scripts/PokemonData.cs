@@ -16,4 +16,17 @@ public class PokemonData : MonoBehaviour
     public int pokeNum;
 
     public GameObject shinyPrefab = null;
+
+    //For deerling, 0 = winter, 1 = summer, 2 = fall. Spring is default
+    public List<GameObject> variants;
+
+    private void Awake()
+    {
+        if (gameObject.name.Contains("Deerling"))
+        {
+            variants[0].name = "Winter";
+            variants[1].name = "Summer";
+            variants[2].name = "Fall";
+        }
+    }
 }

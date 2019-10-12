@@ -14,6 +14,8 @@ public class Spawner : MonoBehaviour
 
     public Transform target;
 
+    public GameObject manager;
+
     private void Awake()
     {
         int i = 0;
@@ -37,6 +39,33 @@ public class Spawner : MonoBehaviour
             int rand = Random.Range(0, objectToSpawn.Count);
             GameObject spawned = objectToSpawn[rand];
             int randShiny = Random.Range(0, 8192);
+            if (spawned.name.Contains("Umbreon"))
+            {
+                if (manager.GetComponent<DaylightCycle>().day)
+                {
+                    rand = Random.Range(0, objectToSpawn.Count);
+                    spawned = objectToSpawn[rand];
+                }
+            }
+
+            if (spawned.name.Contains("Deerling"))
+            {
+                if (manager.GetComponent<SeasonCycle>().season == "Winter")
+                {
+                    spawned = spawned.GetComponent<PokemonData>().variants[0];
+                }
+                else if (manager.GetComponent<SeasonCycle>().season == "Summer")
+                {
+                    spawned = spawned.GetComponent<PokemonData>().variants[1];
+
+                }
+                else if (manager.GetComponent<SeasonCycle>().season == "Fall")
+                {
+                    spawned = spawned.GetComponent<PokemonData>().variants[2];
+
+                }
+            }
+
             if (randShiny == 888)
             {
                 Debug.Log("Shiny");
