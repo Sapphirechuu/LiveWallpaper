@@ -44,7 +44,7 @@ MonoBehaviour:
     m_Value: 0
     min: 0
   includeSunInBaking:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   sunSize:
     m_OverrideState: 1
@@ -58,12 +58,12 @@ MonoBehaviour:
     max: 10
   atmosphereThickness:
     m_OverrideState: 1
-    m_Value: 2.4
+    m_Value: 5
     min: 0
     max: 5
   skyTint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
     max: 1
   maxFogDistance:
     m_OverrideState: 1
-    m_Value: 5000
+    m_Value: 500
     min: 0
   mipFogMaxMip:
     m_OverrideState: 1
@@ -193,7 +193,7 @@ MonoBehaviour:
     max: 1
   enableDistantFog:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
 --- !u!114 &-502106572439858402
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -213,7 +213,7 @@ MonoBehaviour:
     m_Value: 2
   skyAmbientMode:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 1
   fogType:
     m_OverrideState: 1
     m_Value: 3
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0
   toeStrength:
     m_OverrideState: 0
     m_Value: 0
