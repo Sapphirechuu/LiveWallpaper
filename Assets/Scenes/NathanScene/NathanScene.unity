@@ -672,7 +672,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 3e05dd7ab6dde0d498023e6aa53f69f7, type: 2}
+  sharedProfile: {fileID: 11400000, guid: b9656c89cb0314b48a13faadbfd41fac, type: 2}
 --- !u!4 &437606231
 Transform:
   m_ObjectHideFlags: 0
@@ -809,7 +809,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.76161444, g: 0.990566, b: 0.96840835, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -854,7 +854,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.191e-42, y: 1.02e-43, z: 1.3731e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -865,13 +865,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534166298}
-  m_LocalRotation: {x: 0.3678282, y: -0.44628733, z: 0.20810716, w: 0.78881025}
+  m_LocalRotation: {x: 0.15644875, y: -0.5170154, z: 0.09675677, w: 0.8359767}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -59, z: 0}
+  m_LocalEulerAnglesHint: {x: 21.2, y: -63.47, z: 0}
 --- !u!114 &534166301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,7 +953,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 1
+  displayLightIntensity: 2
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
