@@ -15,7 +15,9 @@ MonoBehaviour:
   rarity: 3
   shiny: 0
   pokeNum: 426
+  isFlying: 1
   shinyPrefab: {fileID: 0}
+  variants: []
 --- !u!1001 &7280477414052321977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26,13 +28,8 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: ed93a9b0537461f4c8382f4eee7901d1,
         type: 3}
       propertyPath: m_Name
-      value: 426_Drifblim
+      value: 426_Drifblim Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: ed93a9b0537461f4c8382f4eee7901d1,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 43d255c655dcb5e49ae27739206eb7d6, type: 2}
     - target: {fileID: -4216859302048453862, guid: ed93a9b0537461f4c8382f4eee7901d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -103,6 +100,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: ed93a9b0537461f4c8382f4eee7901d1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 43d255c655dcb5e49ae27739206eb7d6, type: 2}
     - target: {fileID: 8796887604765801504, guid: ed93a9b0537461f4c8382f4eee7901d1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -15,6 +15,8 @@ public class PokemonData : MonoBehaviour
     //Pokedex Number of the Pokemon
     public int pokeNum;
 
+    public bool isFlying;
+
     public GameObject shinyPrefab = null;
 
     //For deerling, 0 = winter, 1 = summer, 2 = fall. Spring is default

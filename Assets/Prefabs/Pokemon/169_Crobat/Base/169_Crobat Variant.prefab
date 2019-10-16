@@ -15,6 +15,9 @@ MonoBehaviour:
   rarity: 3
   shiny: 0
   pokeNum: 169
+  isFlying: 1
+  shinyPrefab: {fileID: 0}
+  variants: []
 --- !u!1001 &803630525866717412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,6 +30,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 169_Crobat Variant
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: b6c254eef6e2725468546bcb8328bd92,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 83a08f5814583f14f86e34dce23fa7e7, type: 2}
     - target: {fileID: -4216859302048453862, guid: b6c254eef6e2725468546bcb8328bd92,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -97,11 +105,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10000006
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: b6c254eef6e2725468546bcb8328bd92,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 83a08f5814583f14f86e34dce23fa7e7, type: 2}
     - target: {fileID: 4425463999696002850, guid: b6c254eef6e2725468546bcb8328bd92,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

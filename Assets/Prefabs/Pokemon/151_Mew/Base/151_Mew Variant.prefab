@@ -15,6 +15,9 @@ MonoBehaviour:
   rarity: 2
   shiny: 0
   pokeNum: 151
+  isFlying: 1
+  shinyPrefab: {fileID: 0}
+  variants: []
 --- !u!1001 &5115919505255934482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25,13 +28,8 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 9a3d5363998b849409b60167d506b7b4,
         type: 3}
       propertyPath: m_Name
-      value: 151_Mew
+      value: 151_Mew Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 9a3d5363998b849409b60167d506b7b4,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 2a9a91591d2d97f4ca3766d5bcac17db, type: 2}
     - target: {fileID: -4216859302048453862, guid: 9a3d5363998b849409b60167d506b7b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,6 +100,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 9a3d5363998b849409b60167d506b7b4,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2a9a91591d2d97f4ca3766d5bcac17db, type: 2}
     - target: {fileID: 32945674396016055, guid: 9a3d5363998b849409b60167d506b7b4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

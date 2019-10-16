@@ -15,6 +15,9 @@ MonoBehaviour:
   rarity: 4
   shiny: 0
   pokeNum: 198
+  isFlying: 1
+  shinyPrefab: {fileID: 0}
+  variants: []
 --- !u!1001 &5890090344761855663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25,13 +28,8 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 8716f4d058cb1fc4b96c1e85a6dff844,
         type: 3}
       propertyPath: m_Name
-      value: 198_Murkrow
+      value: 198_Murkrow Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 8716f4d058cb1fc4b96c1e85a6dff844,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: fc63cdee9f7a55b41b3d003ee6f04ab1, type: 2}
     - target: {fileID: -4216859302048453862, guid: 8716f4d058cb1fc4b96c1e85a6dff844,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,6 +100,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 8716f4d058cb1fc4b96c1e85a6dff844,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fc63cdee9f7a55b41b3d003ee6f04ab1, type: 2}
     - target: {fileID: -4198149163558307075, guid: 8716f4d058cb1fc4b96c1e85a6dff844,
         type: 3}
       propertyPath: m_Materials.Array.data[2]

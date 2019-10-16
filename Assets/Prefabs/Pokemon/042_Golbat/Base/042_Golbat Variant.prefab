@@ -15,6 +15,9 @@ MonoBehaviour:
   rarity: 4
   shiny: 0
   pokeNum: 42
+  isFlying: 1
+  shinyPrefab: {fileID: 0}
+  variants: []
 --- !u!1001 &4004689041304364488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,6 +30,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 042_Golbat Variant
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: a4c0890766f886c40b68c940865350a2,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 885e3be2dc5dcad4abdcc559d9ab5211, type: 2}
     - target: {fileID: -4216859302048453862, guid: a4c0890766f886c40b68c940865350a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -97,11 +105,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10000006
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: a4c0890766f886c40b68c940865350a2,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 885e3be2dc5dcad4abdcc559d9ab5211, type: 2}
     - target: {fileID: 3937820620419306482, guid: a4c0890766f886c40b68c940865350a2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
