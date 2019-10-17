@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class Spawner : MonoBehaviour
     public GameObject emptyObject;
 
     public GameObject overlord;
+
+    public ShinyCounter shinyCounter;
 
     private void Awake()
     {
@@ -58,7 +61,7 @@ public class Spawner : MonoBehaviour
             }
 
 
-            PokemonData pokemonData = spawned.GetComponent<PokemonData>();
+            PokemonData pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();
 
             if (spawned.name.Contains("Deerling"))
             {
@@ -82,6 +85,12 @@ public class Spawner : MonoBehaviour
             {
 
                 Debug.Log("Shiny");
+                shinyCounter.shinyCount++;
+                Debug.Log(spawned.name);
+                if(pokemonData == null)
+                {
+                    Debug.Log("There's an issue");
+                }
                 if (pokemonData.shinyPrefab != null)
                 {
                     spawned = Instantiate(pokemonData.shinyPrefab, gameObject.transform);
@@ -108,7 +117,7 @@ public class Spawner : MonoBehaviour
             spawnedSmooth.delay = 1.0f;
             camTargSmooth.delay = 0.0f;
             //spawned.GetComponent<PokemonData>().seen = true;
-            Debug.Log(spawned.name);
+            //Debug.Log(spawned.name);
             //if (Input.GetKey(KeyCode.Space))
             //{
             //    spawned.GetComponent<PokemonData>().captured = true;

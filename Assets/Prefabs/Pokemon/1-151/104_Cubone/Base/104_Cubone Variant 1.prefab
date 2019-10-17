@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 3
-  shiny: 0
+  shiny: 1
   pokeNum: 104
   isFlying: 0
-  shinyPrefab: {fileID: 1646132940623638983, guid: b7af6aaaaa5be834fbada018547ce5da,
-    type: 3}
+  shinyPrefab: {fileID: 0}
   variants: []
 --- !u!1001 &5751191696482278772
 PrefabInstance:
@@ -29,7 +28,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 3fec01a1e56e2ca44955a12d2f0d4931,
         type: 3}
       propertyPath: m_Name
-      value: 104_Cubone Variant
+      value: 104_Cubone Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3fec01a1e56e2ca44955a12d2f0d4931,
         type: 3}
@@ -105,12 +104,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f4255f4327f8e0a41a759baf760f7f33, type: 2}
+      objectReference: {fileID: 2100000, guid: 6a36652bf4626f94b903821b95ac1288, type: 2}
     - target: {fileID: -8240572470849463122, guid: 3fec01a1e56e2ca44955a12d2f0d4931,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 27448c4cb6f3f0d4f97de062fbaa2a8b, type: 2}
+      objectReference: {fileID: 2100000, guid: ef745bccbb2cf1b45b8f5e41f38f4f6c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fec01a1e56e2ca44955a12d2f0d4931, type: 3}
 --- !u!1 &4391497227513611389 stripped

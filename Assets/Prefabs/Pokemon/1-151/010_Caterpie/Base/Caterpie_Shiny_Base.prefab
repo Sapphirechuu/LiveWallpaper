@@ -455,7 +455,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d084615fc05dcea40956d3d7905dca63, type: 2}
+  - {fileID: 2100000, guid: 4264ea2f4fc48384d8ab6814790e47a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 1936275402257420869}
   - component: {fileID: 947093169935382890}
   m_Layer: 0
-  m_Name: Caterpie_Norm_Base
+  m_Name: Caterpie_Shiny_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -839,11 +839,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 5
-  shiny: 0
+  shiny: 1
   pokeNum: 10
   isFlying: 0
-  shinyPrefab: {fileID: 270260607374372373, guid: 25d8b3bb816d3fb41affa4b3cd43ee0a,
-    type: 3}
+  shinyPrefab: {fileID: 0}
   variants: []
 --- !u!1 &6624614720212851864
 GameObject:
