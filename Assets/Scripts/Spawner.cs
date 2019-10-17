@@ -15,16 +15,25 @@ public class Spawner : MonoBehaviour
     public Transform target;
 
     public GameObject manager;
+    private SeasonCycle seasonCycle;
+
+    public int pathToTake;
+
+    public GameObject camTarg;
+    public GameObject emptyObject;
+
+    public GameObject overlord;
 
     private void Awake()
     {
+        seasonCycle = manager.GetComponent<SeasonCycle>();
         int i = 0;
         foreach (GameObject obj in objectPool)
         {
             
             for (int j = 0; j < objectPool[i].transform.GetChild(0).GetComponent<PokemonData>().rarity; j++)
             {
-                objectToSpawn.Add(objectPool[i]);
+                objectToSpawn.Add(objectPool[i]);    
             }
             i++;
         }
@@ -48,40 +57,56 @@ public class Spawner : MonoBehaviour
                 }
             }
 
+
+            PokemonData pokemonData = spawned.GetComponent<PokemonData>();
+
             if (spawned.name.Contains("Deerling"))
             {
-                if (manager.GetComponent<SeasonCycle>().season == "Winter")
+                if (seasonCycle.season == "Winter")
                 {
-                    spawned = spawned.GetComponent<PokemonData>().variants[0];
+                    spawned = pokemonData.variants[0];
                 }
-                else if (manager.GetComponent<SeasonCycle>().season == "Summer")
+                else if (seasonCycle.season == "Summer")
                 {
-                    spawned = spawned.GetComponent<PokemonData>().variants[1];
+                    spawned = pokemonData.variants[1];
 
                 }
-                else if (manager.GetComponent<SeasonCycle>().season == "Fall")
+                else if (seasonCycle.season == "Fall")
                 {
-                    spawned = spawned.GetComponent<PokemonData>().variants[2];
+                    spawned = pokemonData.variants[2];
 
                 }
             }
 
             if (randShiny == 888)
             {
+
                 Debug.Log("Shiny");
-                if (spawned.GetComponent<PokemonData>().shinyPrefab != null)
+                if (pokemonData.shinyPrefab != null)
                 {
-                    Instantiate(spawned.GetComponent<PokemonData>().shinyPrefab);
+                    spawned = Instantiate(pokemonData.shinyPrefab, gameObject.transform);
                 }
                 else
                 {
-                    Instantiate(spawned, gameObject.transform);
+                    spawned = Instantiate(spawned, gameObject.transform);
                 }
             }
             else
             {
-                Instantiate(spawned, gameObject.transform);
+                spawned = Instantiate(spawned, gameObject.transform);
             }
+            GameObject tempEmpty = Instantiate(emptyObject, gameObject.transform);
+            GameObject tempCamTarg = Instantiate(camTarg, gameObject.transform);
+            SmoothMovment spawnedSmooth = spawned.GetComponent<SmoothMovment>();
+            SmoothMovment camTargSmooth = tempCamTarg.GetComponent<SmoothMovment>();
+            spawnedSmooth.curChild = pathToTake;
+            camTargSmooth.curChild = pathToTake;
+            camTargSmooth.camerTarget = tempEmpty;
+            camTargSmooth.overLord = overlord;
+            spawnedSmooth.camerTarget = tempCamTarg;
+            spawnedSmooth.overLord = overlord;
+            spawnedSmooth.delay = 1.0f;
+            camTargSmooth.delay = 0.0f;
             //spawned.GetComponent<PokemonData>().seen = true;
             Debug.Log(spawned.name);
             //if (Input.GetKey(KeyCode.Space))

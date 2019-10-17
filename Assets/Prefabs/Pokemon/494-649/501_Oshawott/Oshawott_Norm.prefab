@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2187236069921636812}
-  - component: {fileID: 2681529053630884208}
   - component: {fileID: 4783431435354638250}
   - component: {fileID: 471793715260354294}
+  - component: {fileID: 496077762467666718}
   m_Layer: 0
   m_Name: Oshawott_Norm
   m_TagString: Untagged
@@ -34,21 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2681529053630884208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498495841392538749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc865f26a535fc646bd9eeedfe92673e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  target: {fileID: 0}
-  speed: 20
 --- !u!65 &4783431435354638250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78,6 +63,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &496077762467666718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498495841392538749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef8d404916ab24db982f6681050c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overLord: {fileID: 0}
+  camerTarget: {fileID: 0}
+  delay: 0
+  speed: 0.5
+  curChild: 0
 --- !u!1001 &2656265722062079645
 PrefabInstance:
   m_ObjectHideFlags: 0

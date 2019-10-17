@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1927679424212045264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784312832535622546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef8d404916ab24db982f6681050c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overLord: {fileID: 0}
+  camerTarget: {fileID: 0}
+  delay: 0
+  speed: 0.5
+  curChild: 0
 --- !u!1001 &8475383494502475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 7789383576579644377, guid: 0c9cb7b22306a4b45a7e349c4078295a,
         type: 3}
       propertyPath: m_Name
-      value: GameObject
+      value: HoundourNorm
       objectReference: {fileID: 0}
     - target: {fileID: 5619667045976120005, guid: 0c9cb7b22306a4b45a7e349c4078295a,
         type: 3}
@@ -67,8 +84,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5243982126487671655, guid: 0c9cb7b22306a4b45a7e349c4078295a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c9cb7b22306a4b45a7e349c4078295a, type: 3}
+--- !u!1 &7784312832535622546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7789383576579644377, guid: 0c9cb7b22306a4b45a7e349c4078295a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8475383494502475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5612344092955931278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5619667045976120005, guid: 0c9cb7b22306a4b45a7e349c4078295a,

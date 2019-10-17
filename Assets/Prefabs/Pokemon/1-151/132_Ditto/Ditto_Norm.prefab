@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6259180865745653437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146848615991741718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef8d404916ab24db982f6681050c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overLord: {fileID: 0}
+  camerTarget: {fileID: 0}
+  delay: 0
+  speed: 0.5
+  curChild: 0
 --- !u!1001 &2710860918104453403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81,36 +98,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ditto_Norm
       objectReference: {fileID: 0}
-    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 3.6493826
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.201684
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 4.000849
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 1.5004244
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 4.5281982
-      objectReference: {fileID: 0}
-    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0.19064856
-      objectReference: {fileID: 0}
     - target: {fileID: 5243982126487671655, guid: 0c9cb7b22306a4b45a7e349c4078295a,
         type: 3}
       propertyPath: speed
@@ -171,8 +158,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 3.6493826
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.201684
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.000849
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.5004244
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.5281982
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365671672514174052, guid: 0c9cb7b22306a4b45a7e349c4078295a,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.19064856
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5243982126487671655, guid: 0c9cb7b22306a4b45a7e349c4078295a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c9cb7b22306a4b45a7e349c4078295a, type: 3}
+--- !u!1 &1146848615991741718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7789383576579644377, guid: 0c9cb7b22306a4b45a7e349c4078295a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7202135046820239055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3318606252497210378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5619667045976120005, guid: 0c9cb7b22306a4b45a7e349c4078295a,

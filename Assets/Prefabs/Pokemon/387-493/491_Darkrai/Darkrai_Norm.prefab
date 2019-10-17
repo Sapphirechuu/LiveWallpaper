@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2730159101329918574}
   - component: {fileID: 8745844083344152394}
-  - component: {fileID: 448851410757438441}
   - component: {fileID: -6742128827770777763}
+  - component: {fileID: -7587441874015308631}
   m_Layer: 0
   m_Name: Darkrai_Norm
   m_TagString: Untagged
@@ -47,21 +47,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &448851410757438441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3166208785041822312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc865f26a535fc646bd9eeedfe92673e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  target: {fileID: 0}
-  speed: 20
 --- !u!54 &-6742128827770777763
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +63,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-7587441874015308631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166208785041822312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef8d404916ab24db982f6681050c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overLord: {fileID: 0}
+  camerTarget: {fileID: 0}
+  delay: 0
+  speed: 0.5
+  curChild: 0
 --- !u!1001 &6749966217934935486
 PrefabInstance:
   m_ObjectHideFlags: 0

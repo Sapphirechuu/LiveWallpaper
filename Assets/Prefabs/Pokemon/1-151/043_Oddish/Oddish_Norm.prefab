@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4537322778524062462}
   - component: {fileID: 7412392601518145597}
   - component: {fileID: 7869615265864164057}
-  - component: {fileID: 4523105462322236281}
+  - component: {fileID: -3108338236161199285}
   m_Layer: 0
   m_Name: Oddish_Norm
   m_TagString: Untagged
@@ -63,7 +63,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.43, y: 5.49, z: 1.65}
   m_Center: {x: 0, y: 2.58, z: -0.17}
---- !u!114 &4523105462322236281
+--- !u!114 &-3108338236161199285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,12 +72,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1211860207885771585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc865f26a535fc646bd9eeedfe92673e, type: 3}
+  m_Script: {fileID: 11500000, guid: d6ef8d404916ab24db982f6681050c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  target: {fileID: 0}
-  speed: 20
+  overLord: {fileID: 0}
+  camerTarget: {fileID: 0}
+  delay: 0
+  speed: 0.5
+  curChild: 0
 --- !u!114 &5550570908948235615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +95,9 @@ MonoBehaviour:
   rarity: 5
   shiny: 0
   pokeNum: 43
+  isFlying: 0
+  shinyPrefab: {fileID: 0}
+  variants: []
 --- !u!1001 &8314859354525930
 PrefabInstance:
   m_ObjectHideFlags: 0

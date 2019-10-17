@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5683532824013169902}
   - component: {fileID: 7570433331417493251}
   - component: {fileID: 8913697598741479345}
-  - component: {fileID: 6165090521430876719}
+  - component: {fileID: -681961306305204604}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Pinsir_Norm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.531801, y: 14.780317, z: 5.996292}
   m_Center: {x: -1.9512148, y: 6.8901587, z: 0.6881629}
---- !u!114 &6165090521430876719
+--- !u!114 &-681961306305204604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,12 +72,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6247473762691211730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc865f26a535fc646bd9eeedfe92673e, type: 3}
+  m_Script: {fileID: 11500000, guid: d6ef8d404916ab24db982f6681050c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  target: {fileID: 0}
-  speed: 20
+  overLord: {fileID: 0}
+  camerTarget: {fileID: 0}
+  delay: 0
+  speed: 0.5
+  curChild: 0
 --- !u!1001 &7690535393726143383
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4299998694858585681}
   - component: {fileID: 7029329942379546593}
-  - component: {fileID: 3105259816239738602}
   - component: {fileID: 5942669492112500740}
+  - component: {fileID: -7923451380705629803}
   m_Layer: 0
   m_Name: Wailord_norm
   m_TagString: Untagged
@@ -47,21 +47,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 100, y: 49.68094, z: 161.19894}
   m_Center: {x: 0, y: 5.4928436, z: -5.4996185}
---- !u!114 &3105259816239738602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8955612088606559886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc865f26a535fc646bd9eeedfe92673e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  target: {fileID: 0}
-  speed: 20
 --- !u!54 &5942669492112500740
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +63,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-7923451380705629803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955612088606559886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef8d404916ab24db982f6681050c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overLord: {fileID: 0}
+  camerTarget: {fileID: 0}
+  delay: 0
+  speed: 0.5
+  curChild: 0
 --- !u!1001 &1462399080153653398
 PrefabInstance:
   m_ObjectHideFlags: 0
