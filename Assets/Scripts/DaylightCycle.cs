@@ -14,6 +14,9 @@ public class DaylightCycle : MonoBehaviour
     [ReadOnlyField]
     public int hour;
 
+    public bool isSet;
+    public bool nightSet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,17 +26,33 @@ public class DaylightCycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time = DateTime.Now;
-        hour = time.Hour;
-        if (hour >= 19 || hour <= 6)
+        if (!isSet)
         {
-            night = true;
-            day = false;
+            time = DateTime.Now;
+            hour = time.Hour;
+            if (hour >= 19 || hour <= 6)
+            {
+                night = true;
+                day = false;
+            }
+            else
+            {
+                night = false;
+                day = true;
+            }
         }
         else
         {
-            night = false;
-            day = true;
+            if (nightSet)
+            {
+                night = true;
+                day = false;
+            }
+            else
+            {
+                day = true;
+                night = false;
+            }
         }
     }
 }
