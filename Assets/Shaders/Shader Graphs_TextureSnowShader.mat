@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_TextureSnowShader
+  m_Shader: {fileID: -6465566751694194690, guid: a69c98e234382e04cac31ab7e1a5e6c6,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_7E7A9110:
+        m_Texture: {fileID: 2800000, guid: 265d4f3b9ea3c894b92b150e36e4e6c2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_9F038C13:
+        m_Texture: {fileID: 2800000, guid: 7c02e347f9424af43a23654503ae05bf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_B0DADDD7:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_CDAA055C:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_E3D70A69:
+        m_Texture: {fileID: 2800000, guid: f3153929304f5e5439a717b3d5b5cd43, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_F2AF3635:
+        m_Texture: {fileID: 2800000, guid: b9e9c7da2b940a044a8b15d76f353c61, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_1AE48BB7: 1
+    - Vector1_24D209D9: 0.5
+    - Vector1_3438ECFF: 0
+    - Vector1_5B2A1B50: 0.1
+    - Vector1_6484FDD0: 6.87
+    - Vector1_A3F0D2C1: 0.5
+    - Vector1_D52DFB90: 1
+    - Vector1_DA6C6AA6: 1
+    m_Colors:
+    - Vector3_8743564A: {r: 0, g: 0, b: 0, a: 0}
