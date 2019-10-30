@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ShinyCounter : MonoBehaviour
 {
     public int shinyCount;
+    [ReadOnlyField]
     public Text shinyText;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,6 @@ public class ShinyCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shinyText.text = shinyCount.ToString();
+        shinyText.text = "Shinies encountered: " + shinyCount.ToString();
     }
 }

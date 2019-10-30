@@ -59,6 +59,14 @@ public class Spawner : MonoBehaviour
                     spawned = objectToSpawn[rand];
                 }
             }
+            else if (spawned.name.Contains("Espeon"))
+            {
+                if (manager.GetComponent<DaylightCycle>().night)
+                {
+                    rand = Random.Range(0, objectToSpawn.Count);
+                    spawned = objectToSpawn[rand];
+                }
+            }
 
 
             PokemonData pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();

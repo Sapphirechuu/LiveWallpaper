@@ -24,8 +24,7 @@ public class SmoothMovment : MonoBehaviour {
     [ReadOnlyField]
     public int curChild = 0;
 
-    private bool delayed = false;
-    private bool rotated = false;   
+    private bool delayed = false;  
 
     Vector3 rotTarg;
     Vector3 posStart;
