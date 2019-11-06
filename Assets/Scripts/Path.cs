@@ -17,7 +17,7 @@ public class Path : MonoBehaviour
     private void Awake()
     {
         spawner = gameObject.transform.parent.GetComponent<Spawner>();
-        target = spawner.target;
+        //target = spawner.target;
         pokemonData = gameObject.transform.GetChild(0).GetComponent<PokemonData>();
     }
     private void Update()

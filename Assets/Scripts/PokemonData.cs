@@ -24,7 +24,7 @@ public class PokemonData : MonoBehaviour
 
     private void Awake()
     {
-        if (gameObject.name.Contains("Deerling"))
+        if (gameObject.name.Contains("Spring"))
         {
             variants[0].name = "Winter";
             variants[1].name = "Summer";

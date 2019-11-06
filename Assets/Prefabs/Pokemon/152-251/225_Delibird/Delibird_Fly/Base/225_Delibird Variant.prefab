@@ -28,7 +28,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 9c04c045381f64748858a0148380e81b,
         type: 3}
       propertyPath: m_Name
-      value: 225_Delibird
+      value: 225_Delibird Variant
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 9c04c045381f64748858a0148380e81b,
         type: 3}
@@ -105,6 +105,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8693396896713138812, guid: 9c04c045381f64748858a0148380e81b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a993c1dd27c22a4d82baf189b202ffa, type: 2}
+    - target: {fileID: 8693396896713138812, guid: 9c04c045381f64748858a0148380e81b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d1d296febc22834a9efacfe12cdebce, type: 2}
+    - target: {fileID: 8693396896713138812, guid: 9c04c045381f64748858a0148380e81b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d85d5b8eeabe9f49b4220224e7a783a, type: 2}
+    - target: {fileID: 8693396896713138812, guid: 9c04c045381f64748858a0148380e81b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47101015a3dde994a86443313df3c34e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c04c045381f64748858a0148380e81b, type: 3}
 --- !u!1 &9119765611153437733 stripped

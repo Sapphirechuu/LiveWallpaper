@@ -28,8 +28,23 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 5adb638763a1b0246bc9cca2bdea26e4,
         type: 3}
       propertyPath: m_Name
-      value: 358_Chimecho
+      value: 358_Chimecho Variant
       objectReference: {fileID: 0}
+    - target: {fileID: -8617188395833676986, guid: 5adb638763a1b0246bc9cca2bdea26e4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7144dfb8b55f2d645a97cd3437f02ae5, type: 2}
+    - target: {fileID: -8617188395833676986, guid: 5adb638763a1b0246bc9cca2bdea26e4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 89a3f1664e04ad74abaded8bf00c9cce, type: 2}
+    - target: {fileID: -8617188395833676986, guid: 5adb638763a1b0246bc9cca2bdea26e4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 282df291d0a7cf44898f745edafd4e2d, type: 2}
     - target: {fileID: -6057140222963153312, guid: 5adb638763a1b0246bc9cca2bdea26e4,
         type: 3}
       propertyPath: m_Controller
