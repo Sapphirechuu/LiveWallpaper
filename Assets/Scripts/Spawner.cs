@@ -15,6 +15,8 @@ public class Spawner : MonoBehaviour
     //The seasonCycle off of the manager
     private SeasonCycle seasonCycle;
 
+    public PokeDex dex;
+
     //Which path to take in scene
     public int pathToTake;
     
@@ -102,6 +104,10 @@ public class Spawner : MonoBehaviour
 
                     //Get the pokemon data from the spawned pokemon
                     PokemonData pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();
+
+                    
+
+
                     //If the spawned pokemon has a seasonal variant
                     if (spawned.name.Contains("Deerling") || spawned.name.Contains("Sawsbuck"))
                     {
@@ -139,6 +145,7 @@ public class Spawner : MonoBehaviour
                         //If the pokemon's shiny prefab does exist
                         if (pokemonData.shinyPrefab != null)
                         {
+                            pokemonData = pokemonData.shinyPrefab.GetComponent<PokemonData>();
                             //Spawn the shiny prefab
                             spawned = Instantiate(pokemonData.shinyPrefab, gameObject.transform);
                         }
@@ -156,6 +163,20 @@ public class Spawner : MonoBehaviour
                         //Spawn the spawned variable
                         spawned = Instantiate(spawned, gameObject.transform);
                     }
+
+
+                    if (pokemonData.shiny)
+                    {
+                        dex.theDex[pokemonData.pokeNum].ShiniesSeen++;
+                        dex.theDex[pokemonData.pokeNum].Seen = true;
+                    }
+                    else
+                    {
+                        dex.theDex[pokemonData.pokeNum].Seen = true;
+                        dex.theDex[pokemonData.pokeNum].NormalSeen++;
+                    }
+
+
                     //Create the tmep empty object for smooth movement
                     GameObject tempEmpty = Instantiate(emptyObject, gameObject.transform);
                     //Create the tmem camTarg object for smooth movement
