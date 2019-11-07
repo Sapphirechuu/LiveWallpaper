@@ -80,24 +80,6 @@ MonoBehaviour:
   delay: 0
   speed: 0.5
   curChild: 0
---- !u!114 &5550570908948235615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6162588348679682294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfdb25a872f080746b98e3a829adad4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rarity: 5
-  shiny: 0
-  pokeNum: 43
-  isFlying: 0
-  shinyPrefab: {fileID: 0}
-  variants: []
 --- !u!1001 &8314859354525930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167,12 +149,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38d6a60022ddaf54e809bfdbc84ccba7, type: 3}
---- !u!1 &6162588348679682294 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6167788686326655004, guid: 38d6a60022ddaf54e809bfdbc84ccba7,
-    type: 3}
-  m_PrefabInstance: {fileID: 8314859354525930}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7196383503667530469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7188654272101915151, guid: 38d6a60022ddaf54e809bfdbc84ccba7,

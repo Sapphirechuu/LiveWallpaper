@@ -8,10 +8,8 @@ public class SceneLoader : MonoBehaviour
 {
     private bool loadScene = false;
 
-    [SerializeField]
-    private int scene;
-    [SerializeField]
-    private Text loadingText;
+    public int scene;
+    public Text loadingText;
     public Canvas loadingCanvas;
 
     [ReadOnlyField]
