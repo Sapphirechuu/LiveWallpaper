@@ -19,6 +19,8 @@ public class PokemonData : MonoBehaviour
 
     public GameObject shinyPrefab = null;
 
+    public bool captured = false;
+
     //For deerling, 0 = winter, 1 = summer, 2 = fall. Spring is default
     public List<GameObject> variants;
 
