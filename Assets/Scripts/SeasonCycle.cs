@@ -15,30 +15,31 @@ public class SeasonCycle : MonoBehaviour
 
     private void Update()
     {
-        date = DateTime.Now;
-        month = date.Month;
         if (!isSetWinter)
         {
-            if (month < 3 || month > 11)
+            switch (DateTime.Now.Month)
             {
-                season = "Winter";
-            }
-            if (month > 3 && month < 6)
-            {
-                season = "Spring";
-            }
-            if (month > 5 && month < 9)
-            {
-                season = "Summer";
-            }
-            if (month > 8 && month < 12)
-            {
-                season = "Fall";
+                case int n when ((n < 3) || (month > 11)):
+                    season = "Winter";
+                    break;
+                case int n when ((n > 3) && (n < 6)):
+                    season = "Spring";
+                    break;
+                case int n when ((n > 5) && (n < 9)):
+                    season = "Summer";
+                    break;
+                case int n when ((n > 8) && (n < 12)):
+                    season = "Fall";
+                    break;
+                default:
+                    season = "Spring";
+                    break;
             }
         }
         else
         {
             season = "Winter";
         }
+
     }
 }
