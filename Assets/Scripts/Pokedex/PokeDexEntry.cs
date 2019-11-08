@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PokeDexEntry : MonoBehaviour
+public class PokeDexEntry 
 {
     public int PokeNumber;
 
