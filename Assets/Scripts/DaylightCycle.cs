@@ -6,16 +6,17 @@ using System;
 public class DaylightCycle : MonoBehaviour
 {
     [ReadOnlyField]
-    public bool night;
+    public bool morning;
     [ReadOnlyField]
     public bool day;
     [ReadOnlyField]
-    public bool morning;
-    [ReadOnlyField]
     public bool evening;
+    [ReadOnlyField]
+    public bool night;
 
     [ReadOnlyField]
     public DateTime time;
+
     [ReadOnlyField]
     public int hour;
 
@@ -82,15 +83,36 @@ public class DaylightCycle : MonoBehaviour
         {
             time = DateTime.Now;
             hour = time.Hour;
-            if (hour >= nightHour || hour <= dayHour)
+
+            switch (hour)
             {
-                night = true;
-                day = false;
-            }
-            else
-            {
-                night = false;
-                day = true;
+                case int n when ((hour >= morningHour) && (hour <= dayHour)):
+                    morning = true;
+                    day = false;
+                    evening = false;
+                    night = false;
+                    break;
+
+                case int n when (hour >= dayHour && hour <= eveningHour):
+                    morning = false;
+                    day = true;
+                    evening = false;
+                    night = false;
+                    break;
+
+                case int n when (hour >= eveningHour && hour <= nightHour):
+                    morning = false;
+                    day = false;
+                    evening = true;
+                    night = false;
+                    break;
+
+                default:
+                    morning = false;
+                    day = false;
+                    evening = false;
+                    night = true;
+                    break;
             }
         }
 
