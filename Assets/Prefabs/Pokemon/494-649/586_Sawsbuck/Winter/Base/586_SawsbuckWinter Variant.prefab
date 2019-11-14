@@ -16,7 +16,12 @@ MonoBehaviour:
   shiny: 0
   pokeNum: 589
   isFlying: 0
+  seasonal: 1
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &5629859600924144619
 PrefabInstance:
@@ -28,13 +33,8 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 1af0885b3b02c7a4bade87f750d5ebe8,
         type: 3}
       propertyPath: m_Name
-      value: 586_SawsbuckWinter
+      value: 586_SawsbuckWinter Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 1af0885b3b02c7a4bade87f750d5ebe8,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: a806d3414e458a34987340fbfea60a03, type: 2}
     - target: {fileID: -4216859302048453862, guid: 1af0885b3b02c7a4bade87f750d5ebe8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -105,6 +105,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 1af0885b3b02c7a4bade87f750d5ebe8,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a806d3414e458a34987340fbfea60a03, type: 2}
     - target: {fileID: 7985482466589204615, guid: 1af0885b3b02c7a4bade87f750d5ebe8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

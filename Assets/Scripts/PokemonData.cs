@@ -17,6 +17,11 @@ public class PokemonData : MonoBehaviour
 
     public bool isFlying;
 
+    public bool seasonal;
+    public bool weathered;
+    public bool nocturnal;
+    public bool diurnal;
+
     public GameObject shinyPrefab = null;
 
     public bool captured = false;

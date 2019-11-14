@@ -77,58 +77,67 @@ public class Spawner : MonoBehaviour
                     GameObject spawned = spawnPool[rand];
                     //Choose a random number between 0, 8191
                     int randShiny = Random.Range(0, 8192);
-                    //If the spawned pokemon only spawns at night
-                    if (spawned.name.Contains("Umbreon"))
-                    {
-                        //If it is currently day
-                        if (manager.GetComponent<DaylightCycle>().day)
-                        {
-                            //Choose another pokemon to spawn
-                            rand = Random.Range(0, spawnPool.Count);
-                            //Set the spawned variable to the new pokemon
-                            spawned = spawnPool[rand];
-                        }
-                    }
-                    //If the spawned pokemon only spawns during the day
-                    else if (spawned.name.Contains("Espeon"))
-                    {
-                        //If it is currently night
-                        if (manager.GetComponent<DaylightCycle>().night)
-                        {
-                            //Choose another pokemon to spawn
-                            rand = Random.Range(0, spawnPool.Count);
-                            //Set the spawned variable to the new pokemon
-                            spawned = spawnPool[rand];
-                        }
-                    }
 
                     //Get the pokemon data from the spawned pokemon
                     PokemonData pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();
 
-                    
-
-
-                    //If the spawned pokemon has a seasonal variant
-                    if (spawned.name.Contains("Deerling") || spawned.name.Contains("Sawsbuck"))
+                    //If the spawned pokemon only spawns at night
+                    if (pokemonData.nocturnal)
                     {
-                        //If the season is currently winter
-                        if (seasonCycle.season == "Winter")
+                        //If it is not currently night
+                        if (!manager.GetComponent<DaylightCycle>().night)
                         {
-                            //Spawn the winter variant
-                            spawned = pokemonData.variants[0];
+                            //Choose another pokemon to spawn
+                            rand = Random.Range(0, spawnPool.Count);
+                            //Set the spawned variable to the new pokemon
+                            spawned = spawnPool[rand];
+                            pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();
                         }
-                        //If the season is currently summer
-                        else if (seasonCycle.season == "Summer")
+                    }
+                    //If the spawned pokemon only spawns during the day
+                    else if (pokemonData.diurnal)
+                    {
+                        //If it is not currently day
+                        if (!manager.GetComponent<DaylightCycle>().day)
                         {
-                            //Spawn the summer variant
-                            spawned = pokemonData.variants[1];
+                            //Choose another pokemon to spawn
+                            rand = Random.Range(0, spawnPool.Count);
+                            //Set the spawned variable to the new pokemon
+                            spawned = spawnPool[rand];
+                            pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();
                         }
-                        //If the season is currently Fall
-                        else if (seasonCycle.season == "Fall")
-                        {
-                            //Spawn the Fall variant
-                            spawned = pokemonData.variants[2];
+                    }
 
+                    if (pokemonData.variants.Count > 0)
+                    {
+
+                        //If the spawned pokemon has a seasonal variant
+                        if (pokemonData.seasonal)
+                        {
+                            //If the season is currently winter
+                            if (seasonCycle.season == "Winter")
+                            {
+                                //Spawn the winter variant
+                                spawned = pokemonData.variants[0];
+                            }
+                            //If the season is currently summer
+                            else if (seasonCycle.season == "Summer")
+                            {
+                                //Spawn the summer variant
+                                spawned = pokemonData.variants[1];
+                            }
+                            //If the season is currently Fall
+                            else if (seasonCycle.season == "Fall")
+                            {
+                                //Spawn the Fall variant
+                                spawned = pokemonData.variants[2];
+
+                            }
+                        }
+                        
+                        if (pokemonData.weathered)
+                        {
+                            //Add weather cycle support here...
                         }
                     }
                     //If the shiny chance variable is equal to 888, this is a one in 8192 chance
