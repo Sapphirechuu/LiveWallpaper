@@ -23,7 +23,12 @@ public class SceneLoader : MonoBehaviour
     public Image animatedImage;
     public Image nonAnimatedImage;
 
-    public SeasonCycle season;
+    private SeasonCycle season;
+
+    private void Start()
+    {
+        season = gameObject.GetComponent<SeasonCycle>();
+    }
 
     void Update()
     {

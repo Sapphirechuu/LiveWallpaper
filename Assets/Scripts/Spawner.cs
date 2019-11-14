@@ -35,6 +35,8 @@ public class Spawner : MonoBehaviour
     [ReadOnlyField]
     public float spawnTimer = 0;
 
+    private bool canSpawn = true;
+
     private void Awake()
     {
         //Get the seasonCycle
@@ -82,8 +84,22 @@ public class Spawner : MonoBehaviour
                     PokemonData pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();
 
                     //If the spawned pokemon only spawns at night
-                    if (pokemonData.nocturnal)
+                    while (pokemonData.nocturnal)
                     {
+                        bool allNocturnal = true;
+                        for (int i = 0; i < objectPool.Count; i++)
+                        {
+                            if (!objectPool[i].transform.GetChild(0).GetComponent<PokemonData>().nocturnal)
+                            {
+                                allNocturnal = false;
+                            }
+                        }
+
+                        if (objectPool.Count <= 1 || allNocturnal)
+                        {
+                            canSpawn = false;
+                            break;
+                        }
                         //If it is not currently night
                         if (!manager.GetComponent<DaylightCycle>().night)
                         {
@@ -95,8 +111,27 @@ public class Spawner : MonoBehaviour
                         }
                     }
                     //If the spawned pokemon only spawns during the day
-                    else if (pokemonData.diurnal)
+                    while (pokemonData.diurnal)
                     {
+                        bool allDiurnal = true;
+                        for (int i = 0; i < objectPool.Count; i++)
+                        {
+                            if (!objectPool[i].transform.GetChild(0).GetComponent<PokemonData>().diurnal)
+                            {
+                                allDiurnal = false;
+                            }
+                        }
+
+                        if (objectPool.Count <= 1 || allDiurnal)
+                        {
+                            canSpawn = false;
+                            break;
+                        }
+
+                        if (objectPool.Count <= 1)
+                        {
+                            break;
+                        }
                         //If it is not currently day
                         if (!manager.GetComponent<DaylightCycle>().day)
                         {
@@ -107,119 +142,129 @@ public class Spawner : MonoBehaviour
                             pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();
                         }
                     }
+                    //If chance = 0, don't spawn and reset the timer
 
-                    if (pokemonData.variants.Count > 0)
+                    if (canSpawn)
                     {
+                        if (pokemonData.variants.Count > 0)
+                        {
 
-                        //If the spawned pokemon has a seasonal variant
-                        if (pokemonData.seasonal)
-                        {
-                            //If the season is currently winter
-                            if (seasonCycle.season == "Winter")
+                            //If the spawned pokemon has a seasonal variant
+                            if (pokemonData.seasonal)
                             {
-                                //Spawn the winter variant
-                                spawned = pokemonData.variants[0];
-                            }
-                            //If the season is currently summer
-                            else if (seasonCycle.season == "Summer")
-                            {
-                                //Spawn the summer variant
-                                spawned = pokemonData.variants[1];
-                            }
-                            //If the season is currently Fall
-                            else if (seasonCycle.season == "Fall")
-                            {
-                                //Spawn the Fall variant
-                                spawned = pokemonData.variants[2];
+                                //If the season is currently winter
+                                if (seasonCycle.season == "Winter")
+                                {
+                                    //Spawn the winter variant
+                                    spawned = pokemonData.variants[0];
+                                }
+                                //If the season is currently summer
+                                else if (seasonCycle.season == "Summer")
+                                {
+                                    //Spawn the summer variant
+                                    spawned = pokemonData.variants[1];
+                                }
+                                //If the season is currently Fall
+                                else if (seasonCycle.season == "Fall")
+                                {
+                                    //Spawn the Fall variant
+                                    spawned = pokemonData.variants[2];
 
+                                }
+                            }
+
+                            if (pokemonData.weathered)
+                            {
+                                //Add weather cycle support here...
                             }
                         }
-                        
-                        if (pokemonData.weathered)
+                        //If the shiny chance variable is equal to 888, this is a one in 8192 chance
+                        if (randShiny == 888)
                         {
-                            //Add weather cycle support here...
+                            //Add one to the shiny count
+                            shinyCounter.shinyCount++;
+                            //If the pokemonData script does not exist
+                            if (pokemonData == null)
+                            {
+                                //Print to the console that there's an issue
+                                Debug.Log("There's an issue");
+                            }
+                            //If the pokemon's shiny prefab does exist
+                            if (pokemonData.shinyPrefab != null)
+                            {
+                                pokemonData = pokemonData.shinyPrefab.GetComponent<PokemonData>();
+                                //Spawn the shiny prefab
+                                spawned = Instantiate(pokemonData.shinyPrefab, gameObject.transform);
+                            }
+                            //If the shiny pregab doesn't exist
+                            else
+                            {
+                                //Spawn the normal pokemon
+                                spawned = Instantiate(spawned, gameObject.transform);
+                            }
                         }
-                    }
-                    //If the shiny chance variable is equal to 888, this is a one in 8192 chance
-                    if (randShiny == 888)
-                    {
-                        //Add one to the shiny count
-                        shinyCounter.shinyCount++;
-                        //If the pokemonData script does not exist
-                        if (pokemonData == null)
-                        {
-                            //Print to the console that there's an issue
-                            Debug.Log("There's an issue");
-                        }
-                        //If the pokemon's shiny prefab does exist
-                        if (pokemonData.shinyPrefab != null)
-                        {
-                            pokemonData = pokemonData.shinyPrefab.GetComponent<PokemonData>();
-                            //Spawn the shiny prefab
-                            spawned = Instantiate(pokemonData.shinyPrefab, gameObject.transform);
-                        }
-                        //If the shiny pregab doesn't exist
+
+                        //If the shiny chance variable is not equal to 888
                         else
                         {
-                            //Spawn the normal pokemon
+                            //Spawn the spawned variable
                             spawned = Instantiate(spawned, gameObject.transform);
                         }
+
+
+                        if (pokemonData.shiny)
+                        {
+                            dex.theDex[pokemonData.pokeNum].ShiniesSeen++;
+                            dex.theDex[pokemonData.pokeNum].Seen = true;
+                        }
+                        else
+                        {
+                            dex.theDex[pokemonData.pokeNum].Seen = true;
+                            dex.theDex[pokemonData.pokeNum].NormalSeen++;
+                        }
+
+
+                        //Create the tmep empty object for smooth movement
+                        GameObject tempEmpty = Instantiate(emptyObject, gameObject.transform);
+                        //Create the tmem camTarg object for smooth movement
+                        GameObject tempCamTarg = Instantiate(camTarg, gameObject.transform);
+                        //Get the smooth movement variable from the spawned pokemon
+                        SmoothMovment spawnedSmooth = spawned.GetComponent<SmoothMovment>();
+                        //Get the smooth movement variable from the temp camtarg
+                        SmoothMovment camTargSmooth = tempCamTarg.GetComponent<SmoothMovment>();
+                        //set the spawned smooth current child to the pathToTake
+                        spawnedSmooth.curChild = pathToTake;
+                        //set the camTarg smooth current child to the pathToTake
+                        camTargSmooth.curChild = pathToTake;
+                        //Set the CamerTarg of the temp camtarg to the temp empty
+                        camTargSmooth.camerTarget = tempEmpty;
+                        //Set the overlord of the camtarg
+                        camTargSmooth.overLord = overlord;
+                        //Set the spawned cam targ to the temp cam targ
+                        spawnedSmooth.camerTarget = tempCamTarg;
+                        //Set the spawned overlord
+                        spawnedSmooth.overLord = overlord;
+                        //Give the spawned smooth move a delay
+                        spawnedSmooth.delay = 1.0f;
+                        //Make sure the camtarg smooth move does not have a delay
+                        camTargSmooth.delay = 0.0f;
+                        //Set the spawn timer to 0
+                        spawnTimer = 0;
                     }
 
-                    //If the shiny chance variable is not equal to 888
                     else
                     {
-                        //Spawn the spawned variable
-                        spawned = Instantiate(spawned, gameObject.transform);
+                        Debug.Log("Nothing can spawn");
                     }
-
-
-                    if (pokemonData.shiny)
-                    {
-                        dex.theDex[pokemonData.pokeNum].ShiniesSeen++;
-                        dex.theDex[pokemonData.pokeNum].Seen = true;
-                    }
-                    else
-                    {
-                        dex.theDex[pokemonData.pokeNum].Seen = true;
-                        dex.theDex[pokemonData.pokeNum].NormalSeen++;
-                    }
-
-
-                    //Create the tmep empty object for smooth movement
-                    GameObject tempEmpty = Instantiate(emptyObject, gameObject.transform);
-                    //Create the tmem camTarg object for smooth movement
-                    GameObject tempCamTarg = Instantiate(camTarg, gameObject.transform);
-                    //Get the smooth movement variable from the spawned pokemon
-                    SmoothMovment spawnedSmooth = spawned.GetComponent<SmoothMovment>();
-                    //Get the smooth movement variable from the temp camtarg
-                    SmoothMovment camTargSmooth = tempCamTarg.GetComponent<SmoothMovment>();
-                    //set the spawned smooth current child to the pathToTake
-                    spawnedSmooth.curChild = pathToTake;
-                    //set the camTarg smooth current child to the pathToTake
-                    camTargSmooth.curChild = pathToTake;
-                    //Set the CamerTarg of the temp camtarg to the temp empty
-                    camTargSmooth.camerTarget = tempEmpty;
-                    //Set the overlord of the camtarg
-                    camTargSmooth.overLord = overlord;
-                    //Set the spawned cam targ to the temp cam targ
-                    spawnedSmooth.camerTarget = tempCamTarg;
-                    //Set the spawned overlord
-                    spawnedSmooth.overLord = overlord;
-                    //Give the spawned smooth move a delay
-                    spawnedSmooth.delay = 1.0f;
-                    //Make sure the camtarg smooth move does not have a delay
-                    camTargSmooth.delay = 0.0f;
-                    //Set the spawn timer to 0
-                    spawnTimer = 0;
                 }
-                //If chance = 0, don't spawn and reset the timer
                 else
                 {
                     Debug.Log("Did not spawn");
                     spawnTimer = 0;
                 }
+                
             }
+            
         }
 
     }
