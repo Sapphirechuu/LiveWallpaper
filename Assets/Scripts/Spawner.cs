@@ -173,9 +173,18 @@ public class Spawner : MonoBehaviour
                                 }
                             }
 
-                            if (pokemonData.weathered)
+                            else if (pokemonData.weathered)
                             {
                                 //Add weather cycle support here...
+                            }
+
+                            else
+                            {
+                                int randVar = Random.Range(0, 2);
+                                if (randVar == 0)
+                                {
+                                    spawned = pokemonData.variants[0];
+                                }
                             }
                         }
                         //If the shiny chance variable is equal to 888, this is a one in 8192 chance

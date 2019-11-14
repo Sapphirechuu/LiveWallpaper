@@ -16,8 +16,14 @@ MonoBehaviour:
   shiny: 0
   pokeNum: 225
   isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
   shinyPrefab: {fileID: 0}
-  variants: []
+  captured: 0
+  variants:
+  - {fileID: 2301164899528692131, guid: a6228fa4d36d0aa4eb990b31b2a911d5, type: 3}
 --- !u!1001 &4693776092682420146
 PrefabInstance:
   m_ObjectHideFlags: 0
