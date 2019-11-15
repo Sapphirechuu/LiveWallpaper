@@ -34,6 +34,7 @@ public class DaylightCycle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         seasonCycle = gameObject.GetComponent<SeasonCycle>();
         string caseSwitch = seasonCycle.season;
 
@@ -74,10 +75,16 @@ public class DaylightCycle : MonoBehaviour
                 nightHour = 19;
                 break;
         }
+        CheckTime();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        CheckTime();
+    }
+
+    void CheckTime()
     {
         if (!isSet)
         {
