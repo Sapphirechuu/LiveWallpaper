@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 3
+  defaultRarity: 3
   shiny: 0
   pokeNum: 472
   isFlying: 1
+  seasonal: 0
+  weathered: 0
+  nocturnal: 1
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &7139995011194112971
 PrefabInstance:
@@ -28,13 +38,8 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 8fcb729772a5f534d904bf5f199a93ff,
         type: 3}
       propertyPath: m_Name
-      value: 472_Gliscor
+      value: 472_Gliscor Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 8fcb729772a5f534d904bf5f199a93ff,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: cc560d37b8d42ec44be1a3031656467d, type: 2}
     - target: {fileID: -4216859302048453862, guid: 8fcb729772a5f534d904bf5f199a93ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -105,6 +110,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 8fcb729772a5f534d904bf5f199a93ff,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cc560d37b8d42ec44be1a3031656467d, type: 2}
     - target: {fileID: 936108053552087098, guid: 8fcb729772a5f534d904bf5f199a93ff,
         type: 3}
       propertyPath: m_Materials.Array.data[2]

@@ -9,13 +9,25 @@ public class PokemonData : MonoBehaviour
     //Uncommon - 3
     //Rare - 2
     //Ultra Rare - 1
-    public int rarity;
+    [ReadOnlyField]
+    public int rarity = 0;
+    public int defaultRarity;
     //Shiny or not, Shiny is always Ultra Rare
     public bool shiny;
     //Pokedex Number of the Pokemon
     public int pokeNum;
 
     public bool isFlying;
+
+    public bool seasonal;
+    public bool weathered;
+    public bool nocturnal;
+    public bool diurnal;
+
+    public bool comMorn;
+    public bool comDay;
+    public bool comEven;
+    public bool comNight;
 
     public GameObject shinyPrefab = null;
 
@@ -32,5 +44,6 @@ public class PokemonData : MonoBehaviour
             variants[1].name = "Summer";
             variants[2].name = "Fall";
         }
+        rarity = defaultRarity;
     }
 }

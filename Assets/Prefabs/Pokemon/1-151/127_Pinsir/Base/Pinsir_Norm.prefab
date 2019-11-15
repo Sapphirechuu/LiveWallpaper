@@ -13,8 +13,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 3
+  defaultRarity: 3
   shiny: 0
   pokeNum: 127
+  isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
+  shinyPrefab: {fileID: 0}
+  captured: 0
+  variants: []
 --- !u!1001 &1040850461465745857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25,7 +38,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 635c6eb8455cbfe4496769acdd0a9584,
         type: 3}
       propertyPath: m_Name
-      value: 127_Pinsir
+      value: Pinsir_Norm
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 635c6eb8455cbfe4496769acdd0a9584,
         type: 3}

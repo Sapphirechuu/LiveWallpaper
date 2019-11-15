@@ -13,8 +13,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 4
+  defaultRarity: 4
   shiny: 0
   pokeNum: 302
+  isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
+  shinyPrefab: {fileID: 0}
+  captured: 0
+  variants: []
 --- !u!1001 &2771726038717458852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32,16 +45,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 7cecd00b80b5bfb41bae573855a6d657, type: 2}
-    - target: {fileID: -5191446460950207872, guid: 4223073613c21564e9ebb3304f12125c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e9d5d36f02dadd342b0b07e310b55875, type: 2}
-    - target: {fileID: -5191446460950207872, guid: 4223073613c21564e9ebb3304f12125c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: d60f1fb04a21f614cbbf97496e3f4801, type: 2}
     - target: {fileID: -4216859302048453862, guid: 4223073613c21564e9ebb3304f12125c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -112,6 +115,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10000006
       objectReference: {fileID: 0}
+    - target: {fileID: -5191446460950207872, guid: 4223073613c21564e9ebb3304f12125c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e9d5d36f02dadd342b0b07e310b55875, type: 2}
+    - target: {fileID: -5191446460950207872, guid: 4223073613c21564e9ebb3304f12125c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d60f1fb04a21f614cbbf97496e3f4801, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4223073613c21564e9ebb3304f12125c, type: 3}
 --- !u!1 &6149325764588941485 stripped

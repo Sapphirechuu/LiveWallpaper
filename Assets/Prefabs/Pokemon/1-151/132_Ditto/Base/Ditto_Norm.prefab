@@ -13,11 +13,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 3
+  defaultRarity: 3
   shiny: 0
   pokeNum: 132
   isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
   shinyPrefab: {fileID: 1146848615991741718, guid: 3d6d028fa6794dd48abce20c6f339263,
     type: 3}
+  captured: 0
   variants: []
 --- !u!1001 &358911542275467963
 PrefabInstance:

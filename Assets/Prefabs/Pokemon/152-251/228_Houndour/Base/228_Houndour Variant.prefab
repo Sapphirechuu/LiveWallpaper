@@ -13,8 +13,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 4
+  defaultRarity: 4
   shiny: 0
   pokeNum: 228
+  isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 1
+  shinyPrefab: {fileID: 0}
+  captured: 0
+  variants: []
 --- !u!1001 &2499847775707159055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,21 +40,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 228_Houndour Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -8509956685708519720, guid: 6e20dc05e40e01447aaa83e5e90e5810,
-        type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: c2158ce6e54936a43bd67acca470ab55, type: 2}
-    - target: {fileID: -8509956685708519720, guid: 6e20dc05e40e01447aaa83e5e90e5810,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9c19a1f322ce80947b094403c4afa89b, type: 2}
-    - target: {fileID: -8509956685708519720, guid: 6e20dc05e40e01447aaa83e5e90e5810,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9c19a1f322ce80947b094403c4afa89b, type: 2}
     - target: {fileID: -6057140222963153312, guid: 6e20dc05e40e01447aaa83e5e90e5810,
         type: 3}
       propertyPath: m_Controller
@@ -117,6 +115,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10000006
       objectReference: {fileID: 0}
+    - target: {fileID: -8509956685708519720, guid: 6e20dc05e40e01447aaa83e5e90e5810,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2158ce6e54936a43bd67acca470ab55, type: 2}
+    - target: {fileID: -8509956685708519720, guid: 6e20dc05e40e01447aaa83e5e90e5810,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c19a1f322ce80947b094403c4afa89b, type: 2}
+    - target: {fileID: -8509956685708519720, guid: 6e20dc05e40e01447aaa83e5e90e5810,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c19a1f322ce80947b094403c4afa89b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e20dc05e40e01447aaa83e5e90e5810, type: 3}
 --- !u!1 &5877429892011524870 stripped

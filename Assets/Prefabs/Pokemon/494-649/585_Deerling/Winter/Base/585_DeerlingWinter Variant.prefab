@@ -16,7 +16,12 @@ MonoBehaviour:
   shiny: 0
   pokeNum: 585
   isFlying: 0
+  seasonal: 1
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &6969283965820525969
 PrefabInstance:
@@ -28,7 +33,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d28cf02460ee8614da5649506df57130,
         type: 3}
       propertyPath: m_Name
-      value: 585_DeerlingWinter
+      value: 585_DeerlingWinter Variant
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: d28cf02460ee8614da5649506df57130,
         type: 3}
