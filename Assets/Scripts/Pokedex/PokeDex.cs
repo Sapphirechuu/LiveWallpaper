@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public class PokeDex : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class PokeDex : MonoBehaviour
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
+                Debug.Log(hit.collider.gameObject.name);
                 if (hit.collider.gameObject.tag == "pokeman")
                 {
                     if (!hit.collider.gameObject.transform.GetChild(0).GetComponent<PokemonData>().captured)
@@ -51,7 +53,7 @@ public class PokeDex : MonoBehaviour
                         }
                     }
                 }
-            }            
+            }
         }
 
         //Debug.Log(theDex[7].NormalCaught);
