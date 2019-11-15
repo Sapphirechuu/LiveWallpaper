@@ -25,12 +25,11 @@ public class SceneLoader : MonoBehaviour
     public Image animatedImage;
     public Image nonAnimatedImage;
 
-    public DaylightCycle daylight;
+    private DaylightCycle daylight;
 
     private void Start()
     {
         daylight = gameObject.GetComponent<DaylightCycle>();
-
     }
 
     void Update()
@@ -107,6 +106,11 @@ public class SceneLoader : MonoBehaviour
         {
             loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
         }
+    }
+
+    void LoadSceneStuff()
+    {
+
     }
 
     IEnumerator LoadNewScene()

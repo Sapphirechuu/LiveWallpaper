@@ -33,7 +33,7 @@ public class PokemonData : MonoBehaviour
 
     public bool captured = false;
 
-    //For deerling, 0 = winter, 1 = summer, 2 = fall. Spring is default
+    //For Seasonal, 0 = winter, 1 = summer, 2 = fall. Spring is default
     public List<GameObject> variants;
 
     private void Awake()

@@ -34,7 +34,6 @@ public class DaylightCycle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         seasonCycle = gameObject.GetComponent<SeasonCycle>();
         string caseSwitch = seasonCycle.season;
 
