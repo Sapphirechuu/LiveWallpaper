@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 4
+  defaultRarity: 4
   shiny: 0
   pokeNum: 788
   isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &5635208030585825513
 PrefabInstance:
@@ -28,18 +38,8 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: ea5fc1f09e0709b4b85e858b74478133,
         type: 3}
       propertyPath: m_Name
-      value: Mimikyu
+      value: Mimikyu Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: ea5fc1f09e0709b4b85e858b74478133,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 72e858b1ba2dffd4cbecc9f4f7bd983c, type: 2}
-    - target: {fileID: -5637677543247082414, guid: ea5fc1f09e0709b4b85e858b74478133,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 79e321b234c85f44d8d730efdc80fa02, type: 2}
     - target: {fileID: -4216859302048453862, guid: ea5fc1f09e0709b4b85e858b74478133,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -110,6 +110,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: ea5fc1f09e0709b4b85e858b74478133,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 72e858b1ba2dffd4cbecc9f4f7bd983c, type: 2}
+    - target: {fileID: -5637677543247082414, guid: ea5fc1f09e0709b4b85e858b74478133,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 79e321b234c85f44d8d730efdc80fa02, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea5fc1f09e0709b4b85e858b74478133, type: 3}
 --- !u!1 &4401612014920692192 stripped

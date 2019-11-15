@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 4
+  defaultRarity: 4
   shiny: 0
   pokeNum: 200
   isFlying: 1
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 1
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &6614926028866526896
 PrefabInstance:

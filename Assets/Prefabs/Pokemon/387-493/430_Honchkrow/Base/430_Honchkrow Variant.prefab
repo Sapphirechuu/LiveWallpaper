@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 3
+  defaultRarity: 3
   shiny: 0
   pokeNum: 430
   isFlying: 1
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &8977834122319121574
 PrefabInstance:
@@ -30,11 +40,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 430_Honchkrow Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 77d47303e7f8c0d46a9168668979bf6f,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: f839ad5f1105f26438b33f83be3031f1, type: 2}
     - target: {fileID: -4216859302048453862, guid: 77d47303e7f8c0d46a9168668979bf6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -105,6 +110,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10000006
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 77d47303e7f8c0d46a9168668979bf6f,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f839ad5f1105f26438b33f83be3031f1, type: 2}
     - target: {fileID: 1987657112247264581, guid: 77d47303e7f8c0d46a9168668979bf6f,
         type: 3}
       propertyPath: m_Materials.Array.data[2]

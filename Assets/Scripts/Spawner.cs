@@ -14,6 +14,9 @@ public class Spawner : MonoBehaviour
     public GameObject manager;
     //The seasonCycle off of the manager
     private SeasonCycle seasonCycle;
+    private DaylightCycle daylight;
+
+    private string timeOfDay = "";
 
     public PokeDex dex;
 
@@ -39,26 +42,32 @@ public class Spawner : MonoBehaviour
 
     private void Awake()
     {
+        daylight = manager.GetComponent<DaylightCycle>();
+        if (daylight.morning)
+        {
+            timeOfDay = "Morning";
+        }
+        else if (daylight.day)
+        {
+            timeOfDay = "Day";
+        }
+        else if (daylight.evening)
+        {
+            timeOfDay = "Evening";
+        }
+        else if (daylight.night)
+        {
+            timeOfDay = "Night";
+        }
+
         //Get the seasonCycle
         seasonCycle = manager.GetComponent<SeasonCycle>();
-        //Use i to know which index the foreach loop is at
-        int i = 0;
-        //For each object in the object pool
-        foreach (GameObject obj in objectPool)
-        {
-            //Loop as many times as the rarity int is
-            for (int j = 0; j < objectPool[i].transform.GetChild(0).GetComponent<PokemonData>().rarity; j++)
-            {
-                //Add the object to the spawn pool (ex; if rarity is 2, add 2 of the same object to spawn pool)
-                spawnPool.Add(objectPool[i]);    
-            }
-            //Add to i
-            i++;
-        }
+        UpdateSpawnPool();
     }
 
     private void Update()
     {
+        UpdateTime();
         //If the spawner doesn't have a pokemon spawned
         if (transform.childCount == 0)
         {
@@ -101,7 +110,7 @@ public class Spawner : MonoBehaviour
                             break;
                         }
                         //If it is not currently night
-                        if (!manager.GetComponent<DaylightCycle>().night)
+                        if (!daylight.night)
                         {
                             //Choose another pokemon to spawn
                             rand = Random.Range(0, spawnPool.Count);
@@ -133,7 +142,7 @@ public class Spawner : MonoBehaviour
                             break;
                         }
                         //If it is not currently day
-                        if (!manager.GetComponent<DaylightCycle>().day)
+                        if (!daylight.day)
                         {
                             //Choose another pokemon to spawn
                             rand = Random.Range(0, spawnPool.Count);
@@ -276,5 +285,143 @@ public class Spawner : MonoBehaviour
             
         }
 
+    }
+
+    void UpdateTime()
+    {
+        if (timeOfDay == "Morning" && !daylight.morning)
+        {
+            foreach (GameObject spawnable in objectPool)
+            {
+                if (spawnable.GetComponent<PokemonData>().comMorn)
+                {
+                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity + 1;
+                }
+                else
+                {
+                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity;
+                }
+            }
+
+            UpdateSpawnPool();
+
+            if (daylight.day)
+            {
+                timeOfDay = "Day";
+            }
+            else if (daylight.evening)
+            {
+                timeOfDay = "Evening";
+            }
+            else if (daylight.night)
+            {
+                timeOfDay = "Night";
+            }
+        }
+        else if (timeOfDay == "Day" && !daylight.day)
+        {
+            foreach (GameObject spawnable in objectPool)
+            {
+                if (spawnable.GetComponent<PokemonData>().comDay)
+                {
+                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity + 1;
+                }
+                else
+                {
+                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity;
+                }
+            }
+
+            UpdateSpawnPool();
+
+            if (daylight.morning)
+            {
+                timeOfDay = "Morning";
+            }
+            else if (daylight.evening)
+            {
+                timeOfDay = "Evening";
+            }
+            else if (daylight.night)
+            {
+                timeOfDay = "Night";
+            }
+        }
+        else if (timeOfDay == "Evening" && !daylight.evening)
+        {
+            foreach (GameObject spawnable in objectPool)
+            {
+                if (spawnable.GetComponent<PokemonData>().comEven)
+                {
+                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity + 1;
+                }
+                else
+                {
+                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity;
+                }
+            }
+
+            UpdateSpawnPool();
+
+            if (daylight.morning)
+            {
+                timeOfDay = "Morning";
+            }
+            else if (daylight.day)
+            {
+                timeOfDay = "Day";
+            }
+            else if (daylight.night)
+            {
+                timeOfDay = "Night";
+            }
+        }
+        else if (timeOfDay == "Night" && !daylight.night)
+        {
+            foreach (GameObject spawnable in objectPool)
+            {
+                if (spawnable.GetComponent<PokemonData>().comNight)
+                {
+                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity + 1;
+                }
+                else
+                {
+                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity;
+                }
+            }
+
+            UpdateSpawnPool();
+
+            if (daylight.morning)
+            {
+                timeOfDay = "Morning";
+            }
+            else if (daylight.day)
+            {
+                timeOfDay = "Day";
+            }
+            else if (daylight.evening)
+            {
+                timeOfDay = "Evening";
+            }
+        }
+    }
+
+    void UpdateSpawnPool()
+    {
+        //Use i to know which index the foreach loop is at
+        int i = 0;
+        //For each object in the object pool
+        foreach (GameObject obj in objectPool)
+        {
+            //Loop as many times as the rarity int is
+            for (int j = 0; j < objectPool[i].transform.GetChild(0).GetComponent<PokemonData>().rarity; j++)
+            {
+                //Add the object to the spawn pool (ex; if rarity is 2, add 2 of the same object to spawn pool)
+                spawnPool.Add(objectPool[i]);
+            }
+            //Add to i
+            i++;
+        }
     }
 }

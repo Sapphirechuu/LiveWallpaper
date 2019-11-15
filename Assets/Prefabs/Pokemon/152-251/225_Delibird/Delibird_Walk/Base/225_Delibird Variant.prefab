@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 4
+  defaultRarity: 4
   shiny: 0
   pokeNum: 225
   isFlying: 0
@@ -20,6 +21,10 @@ MonoBehaviour:
   weathered: 0
   nocturnal: 0
   diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 1
   shinyPrefab: {fileID: 0}
   captured: 0
   variants:

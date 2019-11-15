@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 5
+  defaultRarity: 5
   shiny: 0
   pokeNum: 607
   isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &1782028845018037898
 PrefabInstance:
@@ -30,26 +40,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 607_Litwick Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -7292598352206507082, guid: 67aacd6c7ffdbf1439b8901e208de23a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 76cbf63bddccb9540bff1220bac3e8cd, type: 2}
-    - target: {fileID: -7292598352206507082, guid: 67aacd6c7ffdbf1439b8901e208de23a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[3]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0c0507d3b48557b458ef88a5fe5acd7b, type: 2}
-    - target: {fileID: -7292598352206507082, guid: 67aacd6c7ffdbf1439b8901e208de23a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1a5e08836ed373a4886f2a0509588a6a, type: 2}
-    - target: {fileID: -7292598352206507082, guid: 67aacd6c7ffdbf1439b8901e208de23a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: b28cda02f1a0ba04a82e8088910528a6, type: 2}
     - target: {fileID: -6057140222963153312, guid: 67aacd6c7ffdbf1439b8901e208de23a,
         type: 3}
       propertyPath: m_Controller
@@ -125,6 +115,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -7292598352206507082, guid: 67aacd6c7ffdbf1439b8901e208de23a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76cbf63bddccb9540bff1220bac3e8cd, type: 2}
+    - target: {fileID: -7292598352206507082, guid: 67aacd6c7ffdbf1439b8901e208de23a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c0507d3b48557b458ef88a5fe5acd7b, type: 2}
+    - target: {fileID: -7292598352206507082, guid: 67aacd6c7ffdbf1439b8901e208de23a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a5e08836ed373a4886f2a0509588a6a, type: 2}
+    - target: {fileID: -7292598352206507082, guid: 67aacd6c7ffdbf1439b8901e208de23a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: b28cda02f1a0ba04a82e8088910528a6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67aacd6c7ffdbf1439b8901e208de23a, type: 3}
 --- !u!1 &7753761344444426115 stripped

@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 3
+  defaultRarity: 3
   shiny: 0
   pokeNum: 709
   isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &6948445143105015833
 PrefabInstance:
@@ -30,11 +40,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 709_Trevenant Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: e2f40c00f2083b1438d0e20d6d86ca5e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9eff4a385f92c2d4980327598a14d2fc, type: 2}
     - target: {fileID: -4216859302048453862, guid: e2f40c00f2083b1438d0e20d6d86ca5e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -105,6 +110,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: e2f40c00f2083b1438d0e20d6d86ca5e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9eff4a385f92c2d4980327598a14d2fc, type: 2}
     - target: {fileID: 2636265047615366048, guid: e2f40c00f2083b1438d0e20d6d86ca5e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

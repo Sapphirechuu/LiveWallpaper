@@ -839,11 +839,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 5
+  defaultRarity: 5
   shiny: 0
   pokeNum: 10
   isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 1
+  comDay: 1
+  comEven: 0
+  comNight: 0
   shinyPrefab: {fileID: 270260607374372373, guid: 25d8b3bb816d3fb41affa4b3cd43ee0a,
     type: 3}
+  captured: 0
   variants: []
 --- !u!1 &6624614720212851864
 GameObject:

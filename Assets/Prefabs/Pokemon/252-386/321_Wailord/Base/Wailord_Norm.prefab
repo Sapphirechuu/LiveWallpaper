@@ -13,8 +13,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 3
+  defaultRarity: 3
   shiny: 0
   pokeNum: 321
+  isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
+  shinyPrefab: {fileID: 0}
+  captured: 0
+  variants: []
 --- !u!1001 &6264187502570184597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,11 +40,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wailord_Norm
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 1abbad1dd3d0a8d4da0b73f8f10b34e1,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e08c75075a0088c4c87346079f72fa9c, type: 2}
     - target: {fileID: -4216859302048453862, guid: 1abbad1dd3d0a8d4da0b73f8f10b34e1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,6 +110,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10000006
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 1abbad1dd3d0a8d4da0b73f8f10b34e1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e08c75075a0088c4c87346079f72fa9c, type: 2}
     - target: {fileID: 6851952438798206448, guid: 1abbad1dd3d0a8d4da0b73f8f10b34e1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

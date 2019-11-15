@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 4
+  defaultRarity: 5
   shiny: 0
   pokeNum: 361
   isFlying: 0
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 1
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &5484311283444041728
 PrefabInstance:
@@ -30,11 +40,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 361_Snorunt Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 18a5741acaec0fd459ef2f7f7cc7fd46,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 2593075bb8b0bd84f9313c56e338b05c, type: 2}
     - target: {fileID: -4216859302048453862, guid: 18a5741acaec0fd459ef2f7f7cc7fd46,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -105,6 +110,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 18a5741acaec0fd459ef2f7f7cc7fd46,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2593075bb8b0bd84f9313c56e338b05c, type: 2}
     - target: {fileID: 6867992908813871172, guid: 18a5741acaec0fd459ef2f7f7cc7fd46,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
