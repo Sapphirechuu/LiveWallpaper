@@ -15,15 +15,22 @@ public class SceneLoader : MonoBehaviour
     [ReadOnlyField]
     public float timer = 0;
 
-    public List<Sprite> winterSprites;
-    public List<Sprite> springSprites;
-    public List<Sprite> summerSprites;
-    public List<Sprite> fallSprites;
+    public List<Sprite> morningSprites;
+    public List<Sprite> daySprites;
+    public List<Sprite> eveningSprites;
+    public List<Sprite> nightSprites;
+
+    private string spriteListToUse;
 
     public Image animatedImage;
     public Image nonAnimatedImage;
 
-    public SeasonCycle season;
+    public DaylightCycle daylight;
+
+    private void Start()
+    {
+        daylight = gameObject.GetComponent<DaylightCycle>();
+    }
 
     void Update()
     {
@@ -40,32 +47,52 @@ public class SceneLoader : MonoBehaviour
             {
 
                 int rand = 0;
-                switch (season.season)
+                if (daylight.morning)
                 {
-                    case "Winter":
-                        rand = Random.Range(0, winterSprites.Count);
-                        break;
-                    case "Spring":
-                        rand = Random.Range(0, springSprites.Count);
-                        break;
-                    case "Summer":
-                        rand = Random.Range(0, summerSprites.Count);
-                        break;
-                    case "Fall":
-                        rand = Random.Range(0, fallSprites.Count);
-                        break;
-                    default:
-                        rand = Random.Range(0, springSprites.Count);
-                        break;
+                    rand = Random.Range(0, morningSprites.Count);
+                    spriteListToUse = "Morning";
                 }
-                
+                else if (daylight.day)
+                {
+                    rand = Random.Range(0, daySprites.Count);
+                    spriteListToUse = "Day";
+                }
+                else if (daylight.evening)
+                {
+                    rand = Random.Range(0, eveningSprites.Count);
+                    spriteListToUse = "Evening";
+                }
+                else
+                {
+                    rand = Random.Range(0, nightSprites.Count);
+                    spriteListToUse = "Night";
+                }
+
                 if (rand == 0)
                 {
                     animatedImage.enabled = true;
                 }
                 else
                 {
-                    nonAnimatedImage.sprite = winterSprites[rand];
+                    switch(spriteListToUse)
+                    {
+                        case "Morning":
+                            nonAnimatedImage.sprite = morningSprites[rand];
+                            break;
+                        case "Day":
+                            nonAnimatedImage.sprite = daySprites[rand];
+                            break;
+                        case "Evening":
+                            nonAnimatedImage.sprite = eveningSprites[rand];
+                            break;
+                        case "Night":
+                            nonAnimatedImage.sprite = nightSprites[rand];
+                            break;
+                        default:
+                            nonAnimatedImage.sprite = nightSprites[rand];
+                            break;
+                    }
+                    nonAnimatedImage.sprite = morningSprites[rand];
                     nonAnimatedImage.enabled = true;
                 }
                 loadingCanvas.enabled = true;
