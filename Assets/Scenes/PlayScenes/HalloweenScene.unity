@@ -1761,82 +1761,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94096005}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &97160562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  rotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
-  exposure:
-    m_OverrideState: 0
-    m_Value: 0
-  multiplier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 0
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 0
-    m_Value: 0
-  sunSize:
-    m_OverrideState: 0
-    m_Value: 0.04
-    min: 0
-    max: 1
-  sunSizeConvergence:
-    m_OverrideState: 0
-    m_Value: 5
-    min: 1
-    max: 10
-  atmosphereThickness:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 5
-  skyTint:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  groundColor:
-    m_OverrideState: 0
-    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  enableSunDisk:
-    m_OverrideState: 0
-    m_Value: 1
 --- !u!1001 &103646659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4574,7 +4498,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -5194,7 +5118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: 1fe21dafd462f9f48a2ac9d622eb758d, type: 2}
   m_StaticLightingSkyUniqueID: 2
-  m_SkySettings: {fileID: 97160562}
+  m_SkySettings: {fileID: 1886123313}
   m_SkySettingsFromProfile: {fileID: 3561426766585053401, guid: 1fe21dafd462f9f48a2ac9d622eb758d,
     type: 2}
 --- !u!114 &305346197
@@ -6536,7 +6460,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -8472,7 +8396,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -9630,7 +9554,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -11200,7 +11124,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -14342,7 +14266,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -18273,7 +18197,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -20781,7 +20705,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1353539799}
   - component: {fileID: 1353539798}
-  - component: {fileID: 1353539800}
   - component: {fileID: 1353539801}
   - component: {fileID: 1353539803}
   - component: {fileID: 1353539802}
@@ -20804,6 +20727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be8d30c6191c784c91ac8052fe6ef5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testing: 0
   morning: 0
   day: 0
   evening: 0
@@ -20825,20 +20749,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1353539800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353539797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e3c1cec2fb0a8b4583cafbc67684d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shinyCount: 0
-  shinyText: {fileID: 799163999}
 --- !u!114 &1353539801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20868,10 +20778,10 @@ MonoBehaviour:
   loadingText: {fileID: 710441770}
   loadingCanvas: {fileID: 1860115948}
   timer: 0
-  winterSprites: []
-  springSprites: []
-  summerSprites: []
-  fallSprites: []
+  morningSprites: []
+  daySprites: []
+  eveningSprites: []
+  nightSprites: []
   animatedImage: {fileID: 1279901497}
   nonAnimatedImage: {fileID: 364946941}
 --- !u!114 &1353539803
@@ -22889,7 +22799,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -24343,7 +24253,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -25768,7 +25678,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shinyCounter
       value: 
-      objectReference: {fileID: 1353539800}
+      objectReference: {fileID: 0}
     - target: {fileID: 7484586245424587957, guid: 71527805ed4af0043bc365626da7ad31,
         type: 3}
       propertyPath: dex
@@ -28724,6 +28634,82 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882361182}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1886123313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 0
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  sunSize:
+    m_OverrideState: 0
+    m_Value: 0.04
+    min: 0
+    max: 1
+  sunSizeConvergence:
+    m_OverrideState: 0
+    m_Value: 5
+    min: 1
+    max: 10
+  atmosphereThickness:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 5
+  skyTint:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  groundColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  enableSunDisk:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!1 &1897050243
 GameObject:
   m_ObjectHideFlags: 0
