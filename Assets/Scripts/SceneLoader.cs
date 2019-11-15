@@ -26,11 +26,9 @@ public class SceneLoader : MonoBehaviour
     public Image nonAnimatedImage;
 
     public DaylightCycle daylight;
-    private SeasonCycle season;
 
     private void Start()
     {
-        season = gameObject.GetComponent<SeasonCycle>();
         daylight = gameObject.GetComponent<DaylightCycle>();
 
     }
