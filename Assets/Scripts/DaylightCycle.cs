@@ -5,6 +5,8 @@ using System;
 
 public class DaylightCycle : MonoBehaviour
 {
+    public bool testing;
+
     [ReadOnlyField]
     public bool morning;
     [ReadOnlyField]
@@ -17,7 +19,7 @@ public class DaylightCycle : MonoBehaviour
     [ReadOnlyField]
     public DateTime time;
 
-    [ReadOnlyField]
+    //[ReadOnlyField]
     public int hour;
 
     private int nightHour;
@@ -87,8 +89,11 @@ public class DaylightCycle : MonoBehaviour
     {
         if (!isSet)
         {
-            time = DateTime.Now;
-            hour = time.Hour;
+            if (!testing)
+            {
+                time = DateTime.Now;
+                hour = time.Hour;
+            }
 
             switch (hour)
             {
