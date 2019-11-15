@@ -43,33 +43,89 @@ public class Spawner : MonoBehaviour
     private void Awake()
     {
         daylight = manager.GetComponent<DaylightCycle>();
+
+        //Get the seasonCycle
+        seasonCycle = manager.GetComponent<SeasonCycle>();
+    }
+
+    private void Start()
+    {
         if (daylight.morning)
         {
+            foreach (GameObject spawnable in objectPool)
+            {
+                if (spawnable.transform.GetChild(0).GetComponent<PokemonData>().comMorn)
+                {
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity + 1;
+                }
+                else
+                {
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity;
+                }
+            }
+
+            UpdateSpawnPool();
             timeOfDay = "Morning";
         }
         else if (daylight.day)
         {
+            foreach (GameObject spawnable in objectPool)
+            {
+                if (spawnable.transform.GetChild(0).GetComponent<PokemonData>().comDay)
+                {
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity + 1;
+                }
+                else
+                {
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity;
+                }
+            }
+
+            UpdateSpawnPool();
             timeOfDay = "Day";
         }
         else if (daylight.evening)
         {
+            foreach (GameObject spawnable in objectPool)
+            {
+                if (spawnable.transform.GetChild(0).GetComponent<PokemonData>().comEven)
+                {
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity + 1;
+                }
+                else
+                {
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity;
+                }
+            }
+
+            UpdateSpawnPool();
             timeOfDay = "Evening";
         }
         else if (daylight.night)
         {
+            foreach (GameObject spawnable in objectPool)
+            {
+                if (spawnable.transform.GetChild(0).GetComponent<PokemonData>().comNight)
+                {
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity + 1;
+                }
+                else
+                {
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity;
+                }
+            }
+
+            UpdateSpawnPool();
             timeOfDay = "Night";
         }
 
-        //Get the seasonCycle
-        seasonCycle = manager.GetComponent<SeasonCycle>();
-        UpdateSpawnPool();
     }
 
     private void Update()
     {
         UpdateTime();
         //If the spawner doesn't have a pokemon spawned
-        if (transform.childCount == 0)
+        if (transform.childCount == 0 && spawnPool.Count > 0)
         {
             //Start the spawn timer
             spawnTimer += Time.deltaTime;
@@ -293,13 +349,13 @@ public class Spawner : MonoBehaviour
         {
             foreach (GameObject spawnable in objectPool)
             {
-                if (spawnable.GetComponent<PokemonData>().comMorn)
+                if (spawnable.transform.GetChild(0).GetComponent<PokemonData>().comMorn)
                 {
-                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity + 1;
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity + 1;
                 }
                 else
                 {
-                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity;
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity;
                 }
             }
 
@@ -322,13 +378,13 @@ public class Spawner : MonoBehaviour
         {
             foreach (GameObject spawnable in objectPool)
             {
-                if (spawnable.GetComponent<PokemonData>().comDay)
+                if (spawnable.transform.GetChild(0).GetComponent<PokemonData>().comDay)
                 {
-                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity + 1;
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity + 1;
                 }
                 else
                 {
-                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity;
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity;
                 }
             }
 
@@ -351,13 +407,13 @@ public class Spawner : MonoBehaviour
         {
             foreach (GameObject spawnable in objectPool)
             {
-                if (spawnable.GetComponent<PokemonData>().comEven)
+                if (spawnable.transform.GetChild(0).GetComponent<PokemonData>().comEven)
                 {
-                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity + 1;
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity + 1;
                 }
                 else
                 {
-                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity;
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity;
                 }
             }
 
@@ -380,13 +436,13 @@ public class Spawner : MonoBehaviour
         {
             foreach (GameObject spawnable in objectPool)
             {
-                if (spawnable.GetComponent<PokemonData>().comNight)
+                if (spawnable.transform.GetChild(0).GetComponent<PokemonData>().comNight)
                 {
-                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity + 1;
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity + 1;
                 }
                 else
                 {
-                    spawnable.GetComponent<PokemonData>().rarity = spawnable.GetComponent<PokemonData>().defaultRarity;
+                    spawnable.transform.GetChild(0).GetComponent<PokemonData>().rarity = spawnable.transform.GetChild(0).GetComponent<PokemonData>().defaultRarity;
                 }
             }
 
