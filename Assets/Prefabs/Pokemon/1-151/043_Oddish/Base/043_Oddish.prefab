@@ -25,7 +25,8 @@ MonoBehaviour:
   comDay: 0
   comEven: 0
   comNight: 1
-  shinyPrefab: {fileID: 0}
+  shinyPrefab: {fileID: 2904118687806795142, guid: f3289cbd6cbdcec408c9de80498e4716,
+    type: 3}
   captured: 0
   variants: []
 --- !u!1001 &2790417813895065877
@@ -40,11 +41,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 043_Oddish
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: c0bb5ef608d8b4c4bbc7a4217931833f,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 1f2423d72f7c8e84da5b439d80f5322b, type: 2}
     - target: {fileID: -4216859302048453862, guid: c0bb5ef608d8b4c4bbc7a4217931833f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -115,6 +111,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10000006
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: c0bb5ef608d8b4c4bbc7a4217931833f,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1f2423d72f7c8e84da5b439d80f5322b, type: 2}
     - target: {fileID: 4715772622984469837, guid: c0bb5ef608d8b4c4bbc7a4217931833f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

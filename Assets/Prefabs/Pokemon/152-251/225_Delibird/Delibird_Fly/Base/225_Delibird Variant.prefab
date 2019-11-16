@@ -13,10 +13,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rarity: 4
+  defaultRarity: 0
   shiny: 0
   pokeNum: 225
   isFlying: 1
+  seasonal: 0
+  weathered: 0
+  nocturnal: 0
+  diurnal: 0
+  comMorn: 0
+  comDay: 0
+  comEven: 0
+  comNight: 0
   shinyPrefab: {fileID: 0}
+  captured: 0
   variants: []
 --- !u!1001 &985733715064843564
 PrefabInstance:
@@ -30,11 +40,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 225_Delibird Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 9c04c045381f64748858a0148380e81b,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 4c9ecb86641c32942801bf09332d2eff, type: 2}
     - target: {fileID: -4216859302048453862, guid: 9c04c045381f64748858a0148380e81b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -105,6 +110,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 9c04c045381f64748858a0148380e81b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4c9ecb86641c32942801bf09332d2eff, type: 2}
     - target: {fileID: 8693396896713138812, guid: 9c04c045381f64748858a0148380e81b,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
@@ -124,7 +134,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 47101015a3dde994a86443313df3c34e, type: 2}
+      objectReference: {fileID: 2100000, guid: 9d85d5b8eeabe9f49b4220224e7a783a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c04c045381f64748858a0148380e81b, type: 3}
 --- !u!1 &9119765611153437733 stripped
