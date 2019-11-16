@@ -89,9 +89,9 @@ public class DaylightCycle : MonoBehaviour
     {
         if (!isSet)
         {
+            time = DateTime.Now;
             if (!testing)
             {
-                time = DateTime.Now;
                 hour = time.Hour;
             }
 
