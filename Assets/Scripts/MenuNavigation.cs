@@ -11,16 +11,26 @@ public class MenuNavigation : MonoBehaviour
     {
         foreach (Canvas canvas in canvasList)
         {
-            if (canvas != null)
+            if (canvasToLoad == "Close")
             {
-                if (!canvas.gameObject.name.Contains(canvasToLoad))
+                canvas.enabled = false;
+            }
+            else
+            {
+                if (canvas != null)
                 {
-                    canvas.enabled = false;
+                    Debug.Log("Canvas isn't null");
+                    if (!canvas.gameObject.name.Contains(canvasToLoad))
+                    {
+                        canvas.enabled = false;
+                    }
+
+                    else
+                    {
+                        canvas.enabled = true;
+                    }
                 }
-                else
-                {
-                    canvas.enabled = true;
-                }
+                
             }
         }
     }
