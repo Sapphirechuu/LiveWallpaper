@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEditor;
+using UnityEngine.EventSystems;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -50,7 +52,16 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(int sceneNum)
     {
-        scene = sceneNum;
+        if (sceneNum <= EditorBuildSettings.scenes.Length - 1)
+        {
+            scene = sceneNum;
+        }
+        else
+        {
+            Debug.Log("The selected scene is not in the build settings, loading default scene. Button: " + EventSystem.current.currentSelectedGameObject.name);
+
+            scene = 0;
+        }
         if (!loadingCanvas.enabled)
         {
 

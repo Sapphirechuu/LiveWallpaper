@@ -1,22 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class MenuNavigation : MonoBehaviour
 {
     public Canvas mainCanvas;
     public Canvas habitatCanvas;
-    public Canvas optionsCanvas;
 
-    // Start is called before the first frame update
-    void Start()
+    public void ChangeView(string canvasToLoad)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (canvasToLoad == "habitat")
+        {
+            habitatCanvas.enabled = true;
+            mainCanvas.enabled = false;
+        }
+        else if (canvasToLoad == "main")
+        {
+            mainCanvas.enabled = true;
+            habitatCanvas.enabled = false;
+        }
+        else
+        {
+            Debug.Log("Canvas does not exist. Button: " + EventSystem.current.currentSelectedGameObject.name);
+        }
     }
 }
