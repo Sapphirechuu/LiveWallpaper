@@ -5,24 +5,23 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class MenuNavigation : MonoBehaviour
 {
-    public Canvas mainCanvas;
-    public Canvas habitatCanvas;
+    public List<Canvas> canvasList;
 
     public void ChangeView(string canvasToLoad)
     {
-        if (canvasToLoad == "habitat")
+        foreach (Canvas canvas in canvasList)
         {
-            habitatCanvas.enabled = true;
-            mainCanvas.enabled = false;
-        }
-        else if (canvasToLoad == "main")
-        {
-            mainCanvas.enabled = true;
-            habitatCanvas.enabled = false;
-        }
-        else
-        {
-            Debug.Log("Canvas does not exist. Button: " + EventSystem.current.currentSelectedGameObject.name);
+            if (canvas != null)
+            {
+                if (!canvas.gameObject.name.Contains(canvasToLoad))
+                {
+                    canvas.enabled = false;
+                }
+                else
+                {
+                    canvas.enabled = true;
+                }
+            }
         }
     }
 }
