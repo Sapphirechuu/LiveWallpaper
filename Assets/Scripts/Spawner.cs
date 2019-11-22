@@ -59,6 +59,15 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
+
+        if (gameObject.transform.childCount == 1)
+        {
+            if (gameObject.transform.GetChild(0).name.Contains("Empty"))
+            {
+                Destroy(gameObject.transform.GetChild(0).gameObject);
+                Debug.Log("Bye Becky");
+            }
+        }
         if (spawnPool.Count == 0)
         {
             if (daylight.morning)
@@ -167,7 +176,7 @@ public class Spawner : MonoBehaviour
                             }
                         }
 
-                        if (objectPool.Count <= 1 || allNocturnal)
+                        if (objectPool.Count <= 1 || allNocturnal && daylight.day)
                         {
                             canSpawn = false;
                             break;
@@ -180,6 +189,10 @@ public class Spawner : MonoBehaviour
                             //Set the spawned variable to the new pokemon
                             spawned = spawnPool[rand];
                             pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();
+                        }
+                        else
+                        {
+                            break;
                         }
                     }
                     //If the spawned pokemon only spawns during the day
@@ -194,16 +207,12 @@ public class Spawner : MonoBehaviour
                             }
                         }
 
-                        if (objectPool.Count <= 1 || allDiurnal)
+                        if ((objectPool.Count <= 1 || allDiurnal) && daylight.night)
                         {
                             canSpawn = false;
                             break;
                         }
 
-                        if (objectPool.Count <= 1)
-                        {
-                            break;
-                        }
                         //If it is not currently day
                         if (!daylight.day)
                         {
@@ -212,6 +221,10 @@ public class Spawner : MonoBehaviour
                             //Set the spawned variable to the new pokemon
                             spawned = spawnPool[rand];
                             pokemonData = spawned.transform.GetChild(0).GetComponent<PokemonData>();
+                        }
+                        else
+                        {
+                            break;
                         }
                     }
                     //If chance = 0, don't spawn and reset the timer

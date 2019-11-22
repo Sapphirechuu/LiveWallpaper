@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEditor;
+using UnityEngine.EventSystems;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -41,66 +43,6 @@ public class SceneLoader : MonoBehaviour
                 loadingCanvas.enabled = false;
             }
         }
-        if (Input.GetKeyUp(KeyCode.Space) && !loadScene)
-        {
-            if (!loadingCanvas.enabled)
-            {
-
-                int rand = 0;
-                if (daylight.morning)
-                {
-                    rand = Random.Range(0, morningSprites.Count);
-                    spriteListToUse = "Morning";
-                }
-                else if (daylight.day)
-                {
-                    rand = Random.Range(0, daySprites.Count);
-                    spriteListToUse = "Day";
-                }
-                else if (daylight.evening)
-                {
-                    rand = Random.Range(0, eveningSprites.Count);
-                    spriteListToUse = "Evening";
-                }
-                else
-                {
-                    rand = Random.Range(0, nightSprites.Count);
-                    spriteListToUse = "Night";
-                }
-
-                if (rand == 0)
-                {
-                    animatedImage.enabled = true;
-                }
-                else
-                {
-                    switch(spriteListToUse)
-                    {
-                        case "Morning":
-                            nonAnimatedImage.sprite = morningSprites[rand];
-                            break;
-                        case "Day":
-                            nonAnimatedImage.sprite = daySprites[rand];
-                            break;
-                        case "Evening":
-                            nonAnimatedImage.sprite = eveningSprites[rand];
-                            break;
-                        case "Night":
-                            nonAnimatedImage.sprite = nightSprites[rand];
-                            break;
-                        default:
-                            nonAnimatedImage.sprite = nightSprites[rand];
-                            break;
-                    }
-                    nonAnimatedImage.sprite = morningSprites[rand];
-                    nonAnimatedImage.enabled = true;
-                }
-                loadingCanvas.enabled = true;
-            }
-            loadScene = true;
-
-            StartCoroutine(LoadNewScene());
-        }
 
         if (loadScene)
         {
@@ -108,9 +50,81 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    void LoadSceneStuff()
+    public void LoadScene(int sceneNum)
     {
+        if (sceneNum <= EditorBuildSettings.scenes.Length - 1)
+        {
+            scene = sceneNum;
+        }
+        else
+        {
+            Debug.Log("The selected scene is not in the build settings, loading default scene. Button: " + EventSystem.current.currentSelectedGameObject.name);
 
+            scene = 0;
+        }
+        if (!loadingCanvas.enabled)
+        {
+
+            int rand = 0;
+            if (daylight.morning)
+            {
+                rand = Random.Range(0, morningSprites.Count);
+                spriteListToUse = "Morning";
+            }
+            else if (daylight.day)
+            {
+                rand = Random.Range(0, daySprites.Count);
+                spriteListToUse = "Day";
+            }
+            else if (daylight.evening)
+            {
+                rand = Random.Range(0, eveningSprites.Count);
+                spriteListToUse = "Evening";
+            }
+            else
+            {
+                rand = Random.Range(0, nightSprites.Count);
+                spriteListToUse = "Night";
+            }
+
+            if (rand == 0)
+            {
+                animatedImage.enabled = true;
+            }
+            else
+            {
+                switch (spriteListToUse)
+                {
+                    case "Morning":
+                        nonAnimatedImage.sprite = morningSprites[rand];
+                        break;
+                    case "Day":
+                        nonAnimatedImage.sprite = daySprites[rand];
+                        break;
+                    case "Evening":
+                        nonAnimatedImage.sprite = eveningSprites[rand];
+                        break;
+                    case "Night":
+                        nonAnimatedImage.sprite = nightSprites[rand];
+                        break;
+                    default:
+                        nonAnimatedImage.sprite = nightSprites[rand];
+                        break;
+                }
+                nonAnimatedImage.sprite = morningSprites[rand];
+                nonAnimatedImage.enabled = true;
+            }
+            loadingCanvas.enabled = true;
+        }
+        loadScene = true;
+        if (scene == -1)
+        {
+            Application.Quit();
+        }
+        else
+        {
+            StartCoroutine(LoadNewScene());
+        }
     }
 
     IEnumerator LoadNewScene()
