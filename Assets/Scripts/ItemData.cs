@@ -7,4 +7,5 @@ public class ItemData : MonoBehaviour
     public string itemName;
     public int rarity;
     public string ball;
+    public Sprite sprite;
 }
