@@ -25,7 +25,8 @@ MonoBehaviour:
   comDay: 0
   comEven: 0
   comNight: 1
-  shinyPrefab: {fileID: 0}
+  shinyPrefab: {fileID: 394964212547156487, guid: 648775e5c18022f41ac02fd980df5b6c,
+    type: 3}
   captured: 0
   variants:
   - {fileID: 2301164899528692131, guid: a6228fa4d36d0aa4eb990b31b2a911d5, type: 3}
@@ -41,11 +42,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 225_Delibird Variant
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 9c04c045381f64748858a0148380e81b,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8d89cf47423f19a4b8179b4fb38c6be2, type: 2}
     - target: {fileID: -4216859302048453862, guid: 9c04c045381f64748858a0148380e81b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -116,6 +112,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10000006
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 9c04c045381f64748858a0148380e81b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8d89cf47423f19a4b8179b4fb38c6be2, type: 2}
     - target: {fileID: 8693396896713138812, guid: 9c04c045381f64748858a0148380e81b,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
