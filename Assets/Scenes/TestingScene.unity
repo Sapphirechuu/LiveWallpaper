@@ -977,7 +977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: 55f8884fe9bc163429f6e44b7b9d1ba1, type: 2}
   m_StaticLightingSkyUniqueID: 2
-  m_SkySettings: {fileID: 1230150647}
+  m_SkySettings: {fileID: 1785090323}
   m_SkySettingsFromProfile: {fileID: 2058131063639686391, guid: 55f8884fe9bc163429f6e44b7b9d1ba1,
     type: 2}
 --- !u!114 &701435868
@@ -2159,82 +2159,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1230150647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  rotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
-  exposure:
-    m_OverrideState: 0
-    m_Value: 0
-  multiplier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 0
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 0
-    m_Value: 0
-  sunSize:
-    m_OverrideState: 0
-    m_Value: 0.04
-    min: 0
-    max: 1
-  sunSizeConvergence:
-    m_OverrideState: 0
-    m_Value: 5
-    min: 1
-    max: 10
-  atmosphereThickness:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 5
-  skyTint:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  groundColor:
-    m_OverrideState: 0
-    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  enableSunDisk:
-    m_OverrideState: 0
-    m_Value: 1
 --- !u!1 &1238145167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,6 +2778,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728439524}
   m_CullTransparentMesh: 0
+--- !u!114 &1785090323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 0
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  sunSize:
+    m_OverrideState: 0
+    m_Value: 0.04
+    min: 0
+    max: 1
+  sunSizeConvergence:
+    m_OverrideState: 0
+    m_Value: 5
+    min: 1
+    max: 10
+  atmosphereThickness:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 5
+  skyTint:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  groundColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  enableSunDisk:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!1 &1808365452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,9 +3287,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: 21300000, guid: 58a897ed3fd47964585de8502218982b, type: 3}
-  - {fileID: 21300000, guid: 463a8389b6d5ec340bc84d6b04f6e471, type: 3}
-  - {fileID: 21300000, guid: fe2c7590ba1ea6644bcedef678aaf328, type: 3}
+  - {fileID: -8502468270910990191, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 2389902090073625072, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 6886555684082629931, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 196643568916642254, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 8147342798966926820, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -3324447877375851513, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -2854871791252982532, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -430847837344633322, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -8513570277299827718, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -1124943507906873095, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -4668367017694604872, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -2155002486628580003, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -6128593147320206869, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -2383819233479288426, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -3844764082702651008, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -3539,9 +3551,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: 21300000, guid: c8dc401ac6140154298a2f434bddfdc1, type: 3}
-  - {fileID: 21300000, guid: 971e020ed6d20554a9c6f3e83448151e, type: 3}
-  - {fileID: 21300000, guid: 90899f175b6702047aa9a3722829d1c4, type: 3}
+  - {fileID: -856031810078670686, guid: 15e38e342e6defd4b8c2bb254edec610, type: 3}
+  - {fileID: -5478481756774396463, guid: 15e38e342e6defd4b8c2bb254edec610, type: 3}
+  - {fileID: -5630921412503066257, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -2454671057994416217, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -1511321624852932389, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -2735442620574319434, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -6705943221773313770, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -3615,9 +3631,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: 21300000, guid: 00c0bc06c7087284ca868cf0132e4b54, type: 3}
-  - {fileID: 21300000, guid: c7061fb45a77ac4469b06bf4c8b2574b, type: 3}
-  - {fileID: 21300000, guid: 0613a13663b89a5419581f7d3430090a, type: 3}
+  - {fileID: 1528478345580224813, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 4473364472744158953, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -566274535514029673, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -101485480216142273, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -8309264178108552276, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -7893788644610503787, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 5807070089218705949, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -777414577705820295, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -8985698160364502574, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -526213612406822765, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -1719378312444509744, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 5607206862895919227, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 1910002594112021087, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 986347801342154450, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -6148221663677741555, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 983649686227624605, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -4804577734045501671, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -5503225345767686397, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 2375812303465009070, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 763981504947682448, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 8346838048634818366, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -8717064873514291416, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -8362006930321615445, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 8233211212661567519, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -2151799222716246463, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 8333158150382121230, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -6441449898248525490, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 7168309766042600548, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 1116870321778444819, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 5472272929654121037, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -3832021944545186768, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -6427430099552302131, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 6636078996897074709, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 678242646450628806, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
