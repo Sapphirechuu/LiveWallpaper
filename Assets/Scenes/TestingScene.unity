@@ -193,6 +193,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186279}
   m_CullTransparentMesh: 0
+--- !u!114 &22676559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 0
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  sunSize:
+    m_OverrideState: 0
+    m_Value: 0.04
+    min: 0
+    max: 1
+  sunSizeConvergence:
+    m_OverrideState: 0
+    m_Value: 5
+    min: 1
+    max: 10
+  atmosphereThickness:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 5
+  skyTint:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  groundColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  enableSunDisk:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!1 &50551488
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +1053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: 55f8884fe9bc163429f6e44b7b9d1ba1, type: 2}
   m_StaticLightingSkyUniqueID: 2
-  m_SkySettings: {fileID: 1785090323}
+  m_SkySettings: {fileID: 22676559}
   m_SkySettingsFromProfile: {fileID: 2058131063639686391, guid: 55f8884fe9bc163429f6e44b7b9d1ba1,
     type: 2}
 --- !u!114 &701435868
@@ -2778,82 +2854,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728439524}
   m_CullTransparentMesh: 0
---- !u!114 &1785090323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  rotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
-  exposure:
-    m_OverrideState: 0
-    m_Value: 0
-  multiplier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 0
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 0
-    m_Value: 0
-  sunSize:
-    m_OverrideState: 0
-    m_Value: 0.04
-    min: 0
-    max: 1
-  sunSizeConvergence:
-    m_OverrideState: 0
-    m_Value: 5
-    min: 1
-    max: 10
-  atmosphereThickness:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 5
-  skyTint:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  groundColor:
-    m_OverrideState: 0
-    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  enableSunDisk:
-    m_OverrideState: 0
-    m_Value: 1
 --- !u!1 &1808365452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,6 +3318,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.08
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &558815806539929243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626496091757441762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &727370621594221387 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3549214140660117949, guid: f1b28b69b5f0fe048a4a34487bf37e89,
@@ -3337,9 +3351,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: 21300000, guid: 56959c588b002574dbe7e7aed149ba7b, type: 3}
-  - {fileID: 21300000, guid: 27970e500fccba941af9bc157e325e4d, type: 3}
-  - {fileID: 21300000, guid: 4f4be442226943c46bb4bed97a65325c, type: 3}
+  - {fileID: -878062088903700591, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 8634810050954283601, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 4839823868836745882, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 5857161767170509323, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -8789996876638757936, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 585704996351954489, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -4522189152141329901, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 5121008141367143905, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -8895420457797417229, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 1797828352110468136, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -6739997864586607564, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 7775118861923167134, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 2551276214651018495, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -8912297727336825335, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -4068888894080043278, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -4222386024555835259, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -4350953864764906709, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 2494336856631038020, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -4053137146311438840, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -5717886577525246228, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -3288226900601866399, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -62863359956270698, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 6133760501257810020, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -5718475598413267632, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 8402782152287069153, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 8953982640331757957, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 458632946663149532, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 3306818873518091615, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 3824344041324364597, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 3634368845965318294, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 2572373519165692702, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -500557448172128922, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: -6526526538945047757, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -3356,6 +3400,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.08
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &867422261895165599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626496091757441762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f1294669e2cc04aa23b5c0fc06cda2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: DNA Splicers
+  rarity: 0
+  ball: Luxury
+  sprite: {fileID: -7465780961099427185, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
 --- !u!1 &897227343074877891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5269195009412249602, guid: b665d94ee18c2fa40a80165980e34e81,
@@ -3995,6 +4055,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85889458a128d5a48a38ce0aaf221567, type: 3}
+--- !u!1 &5626496091757441762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 558815806539929243}
+  - component: {fileID: 867422261895165599}
+  m_Layer: 0
+  m_Name: DNASplicers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &6371910369673549630
 PrefabInstance:
   m_ObjectHideFlags: 0
