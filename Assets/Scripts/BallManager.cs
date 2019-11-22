@@ -19,9 +19,13 @@ public class BallManager : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.gameObject == gameObject)
+            if (Input.GetMouseButtonDown(0))
             {
-                ChooseItem();
+                Debug.Log("LeftMouseButton");
+                if (hit.collider.gameObject == gameObject)
+                {
+                    ChooseItem();
+                }
             }
         }
     }
