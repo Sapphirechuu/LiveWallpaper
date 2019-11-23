@@ -193,82 +193,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186279}
   m_CullTransparentMesh: 0
---- !u!114 &22676559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  rotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
-  exposure:
-    m_OverrideState: 0
-    m_Value: 0
-  multiplier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 0
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 0
-    m_Value: 0
-  sunSize:
-    m_OverrideState: 0
-    m_Value: 0.04
-    min: 0
-    max: 1
-  sunSizeConvergence:
-    m_OverrideState: 0
-    m_Value: 5
-    min: 1
-    max: 10
-  atmosphereThickness:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 5
-  skyTint:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  groundColor:
-    m_OverrideState: 0
-    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  enableSunDisk:
-    m_OverrideState: 0
-    m_Value: 1
 --- !u!1 &50551488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,7 +977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: 55f8884fe9bc163429f6e44b7b9d1ba1, type: 2}
   m_StaticLightingSkyUniqueID: 2
-  m_SkySettings: {fileID: 22676559}
+  m_SkySettings: {fileID: 974078768}
   m_SkySettingsFromProfile: {fileID: 2058131063639686391, guid: 55f8884fe9bc163429f6e44b7b9d1ba1,
     type: 2}
 --- !u!114 &701435868
@@ -1701,6 +1625,82 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &974078768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 0
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  sunSize:
+    m_OverrideState: 0
+    m_Value: 0.04
+    min: 0
+    max: 1
+  sunSizeConvergence:
+    m_OverrideState: 0
+    m_Value: 5
+    min: 1
+    max: 10
+  atmosphereThickness:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 5
+  skyTint:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  groundColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  enableSunDisk:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!1 &992434532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,21 +3287,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: -8502468270910990191, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 2389902090073625072, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 6886555684082629931, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 196643568916642254, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 8147342798966926820, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -3324447877375851513, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -2854871791252982532, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -430847837344633322, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -8513570277299827718, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -1124943507906873095, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -4668367017694604872, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -2155002486628580003, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -6128593147320206869, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -2383819233479288426, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -3844764082702651008, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -3351,39 +3351,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: -878062088903700591, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 8634810050954283601, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 4839823868836745882, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 5857161767170509323, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -8789996876638757936, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 585704996351954489, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -4522189152141329901, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 5121008141367143905, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -8895420457797417229, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 1797828352110468136, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -6739997864586607564, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 7775118861923167134, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 2551276214651018495, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -8912297727336825335, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -4068888894080043278, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -4222386024555835259, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -4350953864764906709, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 2494336856631038020, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -4053137146311438840, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -5717886577525246228, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -3288226900601866399, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -62863359956270698, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 6133760501257810020, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -5718475598413267632, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 8402782152287069153, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 8953982640331757957, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 458632946663149532, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 3306818873518091615, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 3824344041324364597, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 3634368845965318294, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 2572373519165692702, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -500557448172128922, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -6526526538945047757, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 4935484086328942379, guid: 343cf7776df3a6f4aaca13271f53bee4, type: 3}
+  - {fileID: 3974388394517745691, guid: bfddc362a0c0b92429736b8201d00d14, type: 3}
+  - {fileID: 4957783192813036480, guid: c78f4b3aa393e854488db079e462ef93, type: 3}
+  - {fileID: 4518735841608758123, guid: 024dfb0282e9999438910f5272688d76, type: 3}
+  - {fileID: 8437806009244926929, guid: 6de68ff039348b64d832782db8be263f, type: 3}
+  - {fileID: 2652337625694122209, guid: a2a45106ac0309444b7a697b3d3cb28a, type: 3}
+  - {fileID: 1325745401324836792, guid: 1a03aeb54be3f0845baf4e6972a13072, type: 3}
+  - {fileID: 2340923342952474741, guid: ced24253c0973f648bac099a3b198b2f, type: 3}
+  - {fileID: 7562862903539873526, guid: d87d9a175f7525545b2719c1fed9752a, type: 3}
+  - {fileID: 8539049326440088938, guid: 143c21de3a9508f41a60492c1124ab3b, type: 3}
+  - {fileID: 4687387921624192828, guid: b3b6e2b40c3a63b4fb474be1cdb3fe1d, type: 3}
+  - {fileID: 4134943297618152187, guid: 3e9bfa2c5e2061244acb101f9ba15caf, type: 3}
+  - {fileID: 8469235179232840975, guid: 708f45d2e770a2647a36b361d15d8d42, type: 3}
+  - {fileID: 8387539647991883491, guid: 41685a8d5ea69274b96a1ecf91f5cefe, type: 3}
+  - {fileID: 3695304722083524982, guid: e70fe624680225f4a8575ff1abf7c6ef, type: 3}
+  - {fileID: 3059044181642574240, guid: a69020d365ceccd48be6b8a368701898, type: 3}
+  - {fileID: 3920045715452444823, guid: 82da74994b1faeb42959628ff35c6269, type: 3}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -3412,10 +3396,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5f1294669e2cc04aa23b5c0fc06cda2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: DNA Splicers
-  rarity: 0
+  itemName: Wish Stone
+  isLegendary: 0
+  legendaryPKMN: 0
+  twoLegends: 0
+  legendaryPKMNTwo: 0
+  threeLegends: 0
+  legendaryPKMNThree: 0
   ball: Luxury
-  sprite: {fileID: -7465780961099427185, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  sprite: {fileID: 21300000, guid: 2debcbe8b485d9044b4dd53f9ab88b43, type: 3}
+  itemDescription: 
 --- !u!1 &897227343074877891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5269195009412249602, guid: b665d94ee18c2fa40a80165980e34e81,
@@ -3435,9 +3425,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: 21300000, guid: 3a54af316d7aea1419b2422818e46050, type: 3}
-  - {fileID: 21300000, guid: eb7eb671a37042d40bffdef8ad83a1aa, type: 3}
-  - {fileID: 21300000, guid: 53c87425c6108a84996e1de354d03d7a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -3611,13 +3601,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: -856031810078670686, guid: 15e38e342e6defd4b8c2bb254edec610, type: 3}
-  - {fileID: -5478481756774396463, guid: 15e38e342e6defd4b8c2bb254edec610, type: 3}
-  - {fileID: -5630921412503066257, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -2454671057994416217, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -1511321624852932389, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -2735442620574319434, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -6705943221773313770, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -3653,9 +3643,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: 21300000, guid: 85521068d34eb26408598245e79e6796, type: 3}
-  - {fileID: 21300000, guid: d94473b29827bc04eaba1d1a81f88d21, type: 3}
-  - {fileID: 21300000, guid: c1acbdf57822dfb4b8d1ba888682ef2c, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -3691,40 +3681,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: 1528478345580224813, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 4473364472744158953, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -566274535514029673, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -101485480216142273, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -8309264178108552276, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -7893788644610503787, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 5807070089218705949, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -777414577705820295, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -8985698160364502574, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -526213612406822765, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -1719378312444509744, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 5607206862895919227, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 1910002594112021087, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 986347801342154450, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -6148221663677741555, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 983649686227624605, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -4804577734045501671, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -5503225345767686397, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 2375812303465009070, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 763981504947682448, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 8346838048634818366, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -8717064873514291416, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -8362006930321615445, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 8233211212661567519, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -2151799222716246463, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 8333158150382121230, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -6441449898248525490, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 7168309766042600548, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 1116870321778444819, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 5472272929654121037, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -3832021944545186768, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: -6427430099552302131, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 6636078996897074709, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  - {fileID: 678242646450628806, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -3760,9 +3750,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleItems:
-  - {fileID: 21300000, guid: 74305938cb6b3274b9e2070f737232fb, type: 3}
-  - {fileID: 21300000, guid: 7dcd9bfe1298d3948a509810dde1c91d, type: 3}
-  - {fileID: 21300000, guid: 9d8a30e36f5b9774286409d4b6b728b4, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mainCamera: {fileID: 963194227}
   canvas: {fileID: 1132168544}
   image: {fileID: 1728439526}
@@ -4066,7 +4056,7 @@ GameObject:
   - component: {fileID: 558815806539929243}
   - component: {fileID: 867422261895165599}
   m_Layer: 0
-  m_Name: DNASplicers
+  m_Name: BlackGlasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

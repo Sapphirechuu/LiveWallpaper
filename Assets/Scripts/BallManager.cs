@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class BallManager : MonoBehaviour
 {
-    public List<Sprite> possibleItems;
-    private Sprite itemToSpawn;
+    public List<ItemData> possibleItems;
+    private ItemData itemToSpawn;
 
     public Camera mainCamera;
 
@@ -36,6 +36,6 @@ public class BallManager : MonoBehaviour
         itemToSpawn = possibleItems[rand];
 
         canvas.enabled = true;
-        image.GetComponent<Image>().sprite = itemToSpawn;
+        image.GetComponent<Image>().sprite = itemToSpawn.sprite;
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6104261760940074328
+--- !u!1 &2434106413852415275
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 832961300179974282}
-  - component: {fileID: 5297842068180563079}
+  - component: {fileID: 7499525281633317202}
+  - component: {fileID: 7195425583880851798}
   m_Layer: 0
-  m_Name: JadeOrb
+  m_Name: LustrousOrb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &832961300179974282
+--- !u!4 &7499525281633317202
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6104261760940074328}
+  m_GameObject: {fileID: 2434106413852415275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,19 +31,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5297842068180563079
+--- !u!114 &7195425583880851798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6104261760940074328}
+  m_GameObject: {fileID: 2434106413852415275}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5f1294669e2cc04aa23b5c0fc06cda2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Jade Orb
-  rarity: 0
+  itemName: Lustrous Orb
+  isLegendary: 1
+  legendaryPKMN: 0
   ball: Cherish
-  sprite: {fileID: -6835049752147730016, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  sprite: {fileID: -8020903574662216276, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
