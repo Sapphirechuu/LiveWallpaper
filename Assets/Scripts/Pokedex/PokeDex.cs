@@ -55,29 +55,6 @@ public class PokeDex : MonoBehaviour
                 }
             }
         }
-
-        //Debug.Log(theDex[7].NormalCaught);
-        //Debug.Log(theDex[10].NormalCaught);
-        //Debug.Log(theDex[23].NormalCaught);
-        //Debug.Log(theDex[42].NormalCaught);
-        //Debug.Log(theDex[43].NormalCaught);
-        //Debug.Log(theDex[104].NormalCaught);
-        //Debug.Log(theDex[127].NormalCaught);
-        //Debug.Log(theDex[132].NormalCaught);
-        //Debug.Log(theDex[169].NormalCaught);
-        //Debug.Log(theDex[197].NormalCaught);
-
-        //Debug.Log(theDex[7].PokeNumber.ToString() + "  " + theDex[7].NormalCaught);
-        //Debug.Log(theDex[10].PokeNumber.ToString() + "  " + theDex[10].NormalCaught);
-        //Debug.Log(theDex[23].PokeNumber.ToString() + "  " + theDex[23].NormalCaught);
-        //Debug.Log(theDex[42].PokeNumber.ToString() + "  " + theDex[42].NormalCaught);
-        //Debug.Log(theDex[43].PokeNumber.ToString() + "  " + theDex[43].NormalCaught);
-        //Debug.Log(theDex[104].PokeNumber.ToString() + "  " + theDex[104].NormalCaught);
-        //Debug.Log(theDex[127].PokeNumber.ToString() + "  " + theDex[127].NormalCaught);
-        //Debug.Log(theDex[132].PokeNumber.ToString() + "  " + theDex[132].NormalCaught);
-        //Debug.Log(theDex[169].PokeNumber.ToString() + "  " + theDex[169].NormalCaught);
-        //Debug.Log(theDex[197].PokeNumber.ToString() + "  " + theDex[197].NormalCaught);
-
     }
 
     public void LoadTheDex()
