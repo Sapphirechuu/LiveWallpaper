@@ -25,20 +25,20 @@ public class BallManager : MonoBehaviour
             mainCamera = gameObject.transform.parent.gameObject.GetComponent<ItemSpawner>().mainCamera;
         }
 
-        if (canvas == null)
-        {
-            canvas = gameObject.transform.parent.gameObject.GetComponent<ItemSpawner>().canvas;
-        }
+        //if (canvas == null)
+        //{
+        //    canvas = gameObject.transform.parent.gameObject.GetComponent<ItemSpawner>().canvas;
+        //}
 
-        if (image == null)
-        {
-            image = gameObject.transform.parent.gameObject.GetComponent<ItemSpawner>().image;
-        }
+        //if (image == null)
+        //{
+        //    image = gameObject.transform.parent.gameObject.GetComponent<ItemSpawner>().image;
+        //}
 
-        if (text == null)
-        {
-            text = gameObject.transform.parent.gameObject.GetComponent<ItemSpawner>().text;
-        }
+        //if (text == null)
+        //{
+        //    text = gameObject.transform.parent.gameObject.GetComponent<ItemSpawner>().text;
+        //}
 
         if (manager == null)
         {

@@ -12,10 +12,10 @@ public class ItemSpawner : MonoBehaviour
 
     public Camera mainCamera;
 
-    public Canvas canvas;
-    public Image image;
+    //public Canvas canvas;
+    //public Image image;
 
-    public Text text;
+    //public Text text;
 
     public GameObject manager;
     [ReadOnlyField]
