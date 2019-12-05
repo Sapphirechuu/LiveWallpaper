@@ -17,7 +17,9 @@ public class ItemData : MonoBehaviour
     public string itemDescription;
     public bool isTypeSpecific;
     public string type;
-
+    public bool isSceneSpecific;
+    public string scene;
+    
     [CustomEditor(typeof(ItemData))]
     [CanEditMultipleObjects]
     public class ItemDataEditor : Editor
@@ -65,6 +67,12 @@ public class ItemData : MonoBehaviour
             if (data.isTypeSpecific)
             {
                 data.type = EditorGUILayout.TextField("Typing:", data.type);
+            }
+
+            data.isSceneSpecific = GUILayout.Toggle(data.isSceneSpecific, "Is Scene Specific:");
+            if (data.isSceneSpecific)
+            {
+                data.scene = EditorGUILayout.TextField("Scene:", data.scene);
             }
 
             serializedObject.ApplyModifiedProperties();

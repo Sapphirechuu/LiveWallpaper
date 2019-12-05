@@ -19,7 +19,7 @@ public class SeasonCycle : MonoBehaviour
         {
             switch (DateTime.Now.Month)
             {
-                case int n when ((n < 3) || (month > 11)):
+                case int n when ((n < 3) || (n > 11)):
                     season = "Winter";
                     break;
                 case int n when ((n > 3) && (n < 6)):

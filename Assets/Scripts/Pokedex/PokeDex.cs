@@ -33,7 +33,6 @@ public class PokeDex : MonoBehaviour
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.collider.gameObject.name);
                 if (hit.collider.gameObject.tag == "pokeman")
                 {
                     if (!hit.collider.gameObject.transform.GetChild(0).GetComponent<PokemonData>().captured)
