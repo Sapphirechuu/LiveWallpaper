@@ -58,6 +58,7 @@ public class PokeDexVisual : MonoBehaviour
         }
         else if (CurrentDex.theDex[PokeNum].Seen)
         {
+            gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = PokeSprite;
             gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().color = Color.black;
         }
     }

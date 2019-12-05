@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class PokeDex : MonoBehaviour
 {
     public Camera mainCamera;
     public List<PokeDexEntry> theDex;
 
-    private string filePath = "fun.txt";
+    private string filePath = "/poke.dat";
     // Start is called before the first frame update
     void Start()
     {
@@ -59,9 +60,20 @@ public class PokeDex : MonoBehaviour
 
     public void LoadTheDex()
     {
-        if (File.Exists(filePath))
+        string destination = Application.persistentDataPath + filePath;
+        FileStream file;
+
+        if (File.Exists(destination))
         {
-            string[] lines = File.ReadAllLines(filePath);
+            file = File.OpenRead(destination);
+
+
+            BinaryFormatter bf = new BinaryFormatter();
+
+            string[] lines = (string[])bf.Deserialize(file);
+            file.Close();
+            //string[] lines = File.ReadAllLines(filePath);
+            
             int curEntry = 0;
             foreach (string line in lines)
             {
@@ -102,8 +114,71 @@ public class PokeDex : MonoBehaviour
                 theDex[i].NormalCaught.ToString();
         }
 
-        System.IO.File.WriteAllLines(filePath, stringyDex);
+        string destination = Application.persistentDataPath + filePath;
+        FileStream file;
+
+        Debug.Log(Application.persistentDataPath);
+        if (File.Exists(destination))
+        {
+            file = File.OpenWrite(destination);
+        }
+        else
+        {
+            file = File.Create(destination);
+        }
+
+        BinaryFormatter bf = new BinaryFormatter();
+        bf.Serialize(file, stringyDex);
+        file.Close();
+        //System.IO.File.WriteAllLines(filePath, stringyDex);
     }
+    //public void LoadTheDex()
+    //{
+    //    if (File.Exists(filePath))
+    //    {
+    //        string[] lines = File.ReadAllLines(filePath);
+    //        int curEntry = 0;
+    //        foreach (string line in lines)
+    //        {
+    //            string[] values = line.Split(',');
+    //            theDex[curEntry].PokeNumber = int.Parse(values[0]);
+
+    //            if (values[1] == "True") { theDex[curEntry].Captured = true; }
+    //            else { theDex[curEntry].Captured = false; }
+
+    //            if (values[2] == "True") { theDex[curEntry].Seen = true; }
+    //            else { theDex[curEntry].Seen = false; }
+
+    //            if (values[3] == "True") { theDex[curEntry].ShinyCaptured = true; }
+    //            else { theDex[curEntry].ShinyCaptured = false; }
+
+    //            theDex[curEntry].ShiniesSeen = int.Parse(values[4]);
+    //            theDex[curEntry].ShiniesCaught = int.Parse(values[5]);
+    //            theDex[curEntry].NormalSeen = int.Parse(values[6]);
+    //            theDex[curEntry].NormalCaught = int.Parse(values[7]);
+    //            curEntry++;
+    //        }
+    //    }
+    //}
+    //public void SaveTheDex()
+    //{
+    //    string[] stringyDex = new string[810];
+
+    //    for (int i = 0; i < theDex.Count; i++)
+    //    {
+    //        stringyDex[i] = 
+    //            theDex[i].PokeNumber.ToString()     + "," +
+    //            theDex[i].Captured.ToString()       + "," +
+    //            theDex[i].Seen.ToString()           + "," +
+    //            theDex[i].ShinyCaptured.ToString()  + "," +
+    //            theDex[i].ShiniesSeen.ToString()    + "," +
+    //            theDex[i].ShiniesCaught.ToString()  + "," +
+    //            theDex[i].NormalSeen.ToString()     + "," +
+    //            theDex[i].NormalCaught.ToString();
+    //    }
+
+    //    System.IO.File.WriteAllLines(filePath, stringyDex);
+    //}
     private void OnApplicationQuit()
     {
         SaveTheDex();
