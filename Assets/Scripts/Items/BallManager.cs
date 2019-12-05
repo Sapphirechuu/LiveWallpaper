@@ -69,16 +69,15 @@ public class BallManager : MonoBehaviour
         int rand = Random.Range(0, possibleItems.Count);
         itemToSpawn = possibleItems[rand];
 
-        canvas.enabled = true;
-        image.GetComponent<Image>().sprite = itemToSpawn.sprite;
-        text.text = itemToSpawn.itemName;
+        //canvas.enabled = true;
+        //image.GetComponent<Image>().sprite = itemToSpawn.sprite;
+        //text.text = itemToSpawn.itemName;
         AddToInventory(itemToSpawn.GetComponent<ItemData>());
     }
 
     public void AddToInventory(ItemData item)
     {
         bool isInInventory = false;
-        //int indexToUse = inventoryComponent.inventory.IndexOf(in);
         int indexToUse = 0;
         int i = 0;
         foreach (Inventory.InventoryItem invItem in inventoryComponent.inventory)
@@ -100,17 +99,21 @@ public class BallManager : MonoBehaviour
             }
             i++;
         }
+
         if (!isInInventory)
         {
-            inventoryComponent.inventory[indexToUse] = new Inventory.InventoryItem(item.itemName, 1, item.sprite);
+            inventoryComponent.inventory[indexToUse] = new Inventory.InventoryItem(item.itemName, item.itemDescription, 1, item.sprite, indexToUse, true);
         }
+
         else
         {
-            inventoryComponent.inventory[indexToUse] = new Inventory.InventoryItem(item.itemName, inventoryComponent.inventory[indexToUse].quantity + 1, item.sprite);
+            inventoryComponent.inventory[indexToUse] = new Inventory.InventoryItem(item.itemName, item.itemDescription, inventoryComponent.inventory[indexToUse].quantity + 1, item.sprite, indexToUse, true);
         }
-        for (int g = 0; g < 150; g++)
-        {
-            Debug.Log("Inventory Slot: " + g.ToString() + " Item name: " + inventoryComponent.inventory[g].itemName + " Quantity: " +  inventoryComponent.inventory[g].quantity);
-        }
+        Debug.Log(item.itemName);
+
+        //for (int g = 0; g < 150; g++)
+        //{
+        //    Debug.Log("Inventory Slot: " + g.ToString() + " Item name: " + inventoryComponent.inventory[g].itemName + " Quantity: " +  inventoryComponent.inventory[g].quantity);
+        //}
     }
 }
