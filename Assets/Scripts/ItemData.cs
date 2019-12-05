@@ -15,6 +15,8 @@ public class ItemData : MonoBehaviour
     public string ball;
     public Sprite sprite;
     public string itemDescription;
+    public bool isTypeSpecific;
+    public string type;
 
     [CustomEditor(typeof(ItemData))]
     [CanEditMultipleObjects]
@@ -56,6 +58,13 @@ public class ItemData : MonoBehaviour
             if (data.threeLegends)
             {
                 data.legendaryPKMNThree = EditorGUILayout.IntField("Legendary Num Three:", data.legendaryPKMNThree);
+            }
+
+            data.isTypeSpecific = GUILayout.Toggle(data.isTypeSpecific, "Is Type Specific:");
+
+            if (data.isTypeSpecific)
+            {
+                data.type = EditorGUILayout.TextField("Typing:", data.type);
             }
 
             serializedObject.ApplyModifiedProperties();

@@ -13,6 +13,8 @@ public class BallManager : MonoBehaviour
     public Canvas canvas;
     public Image image;
 
+    public Text text;
+
     private void Update()
     {
         RaycastHit hit;
@@ -37,5 +39,7 @@ public class BallManager : MonoBehaviour
 
         canvas.enabled = true;
         image.GetComponent<Image>().sprite = itemToSpawn.sprite;
+        text.text = itemToSpawn.itemName;
+
     }
 }
