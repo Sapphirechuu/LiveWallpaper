@@ -7,11 +7,6 @@ public class ItemData : MonoBehaviour
 {
     public string itemName;
     public bool isLegendary;
-    public int legendaryPKMN = 0;
-    public bool twoLegends;
-    public int legendaryPKMNTwo = 0;
-    public bool threeLegends;
-    public int legendaryPKMNThree = 0;
     public string ball;
     public Sprite sprite;
     public string itemDescription;
@@ -20,62 +15,39 @@ public class ItemData : MonoBehaviour
     public bool isSceneSpecific;
     public string scene;
     
-    [CustomEditor(typeof(ItemData))]
-    [CanEditMultipleObjects]
-    public class ItemDataEditor : Editor
-    {
-        override public void OnInspectorGUI()
-        {
-            var data = target as ItemData;
+    //[CustomEditor(typeof(ItemData))]
+    //[CanEditMultipleObjects]
+    //public class ItemDataEditor : Editor
+    //{
+    //    override public void OnInspectorGUI()
+    //    {
+    //        var data = target as ItemData;
 
-            SerializedProperty sprite;
+    //        SerializedProperty sprite;
 
-            sprite = serializedObject.FindProperty("sprite");
+    //        sprite = serializedObject.FindProperty("sprite");
 
-            EditorGUILayout.PropertyField(sprite, new GUIContent("Sprite:"));
-            data.itemName = EditorGUILayout.TextField("Item Name:", data.itemName);
-            data.ball = EditorGUILayout.TextField("Ball:", data.ball);
-            data.itemDescription = EditorGUILayout.TextField("Item Description:", data.itemDescription);
+    //        EditorGUILayout.PropertyField(sprite, new GUIContent("Sprite:"));
+    //        data.itemName = EditorGUILayout.TextField("Item Name:", data.itemName);
+    //        data.ball = EditorGUILayout.TextField("Ball:", data.ball);
+    //        data.itemDescription = EditorGUILayout.TextField("Item Description:", data.itemDescription);
 
-            data.isLegendary = GUILayout.Toggle(data.isLegendary, "Is Legendary:");
-            if (data.isLegendary)
-            {
-                data.twoLegends = GUILayout.Toggle(data.twoLegends, "Two Legendaries:");
-                if (data.twoLegends)
-                {
-                    data.threeLegends = GUILayout.Toggle(data.threeLegends, "Three Legendaries:");
-                }
-            }
+    //        data.isLegendary = GUILayout.Toggle(data.isLegendary, "Is Legendary:");
 
-            if (data.isLegendary)
-            {
-                data.legendaryPKMN = EditorGUILayout.IntField("Legendary Num:", data.legendaryPKMN);
-            }
+    //        data.isTypeSpecific = GUILayout.Toggle(data.isTypeSpecific, "Is Type Specific:");
 
-            if (data.twoLegends)
-            {
-                data.legendaryPKMNTwo = EditorGUILayout.IntField("Legendary Num Two:", data.legendaryPKMNTwo);
-            }
+    //        if (data.isTypeSpecific)
+    //        {
+    //            data.type = EditorGUILayout.TextField("Typing:", data.type);
+    //        }
 
-            if (data.threeLegends)
-            {
-                data.legendaryPKMNThree = EditorGUILayout.IntField("Legendary Num Three:", data.legendaryPKMNThree);
-            }
+    //        data.isSceneSpecific = GUILayout.Toggle(data.isSceneSpecific, "Is Scene Specific:");
+    //        if (data.isSceneSpecific)
+    //        {
+    //            data.scene = EditorGUILayout.TextField("Scene:", data.scene);
+    //        }
 
-            data.isTypeSpecific = GUILayout.Toggle(data.isTypeSpecific, "Is Type Specific:");
-
-            if (data.isTypeSpecific)
-            {
-                data.type = EditorGUILayout.TextField("Typing:", data.type);
-            }
-
-            data.isSceneSpecific = GUILayout.Toggle(data.isSceneSpecific, "Is Scene Specific:");
-            if (data.isSceneSpecific)
-            {
-                data.scene = EditorGUILayout.TextField("Scene:", data.scene);
-            }
-
-            serializedObject.ApplyModifiedProperties();
-        }
-    }
+    //        serializedObject.ApplyModifiedProperties();
+    //    }
+    //}
 }

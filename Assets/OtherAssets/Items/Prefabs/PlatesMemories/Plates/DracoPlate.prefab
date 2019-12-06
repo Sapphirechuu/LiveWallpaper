@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3452768490569010447}
   - component: {fileID: 2603732966147255563}
   m_Layer: 0
-  m_Name: DracoPlateEDIT
+  m_Name: DracoPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,12 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Deep Sea Scale
-  isLegendary: 0
-  legendaryPKMN: 0
-  twoLegends: 0
-  legendaryPKMNTwo: 0
-  threeLegends: 0
-  legendaryPKMNThree: 0
+  isLegendary: 1
   ball: Ultra
   sprite: {fileID: 986347801342154450, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  itemDescription: 
+  itemDescription: A plate that seems to have a very specific typing.
+  isTypeSpecific: 1
+  type: Dragon
+  isSceneSpecific: 0
+  scene: 

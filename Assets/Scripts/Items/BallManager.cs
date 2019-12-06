@@ -17,6 +17,10 @@ public class BallManager : MonoBehaviour
 
     public GameObject manager;
     public Inventory inventoryComponent;
+    [ReadOnlyField]
+    public int rand;
+
+    int indexToUse;
 
     private void Awake()
     {
@@ -66,9 +70,9 @@ public class BallManager : MonoBehaviour
 
     public void ChooseItem()
     {
-        int rand = Random.Range(0, possibleItems.Count);
+        rand = Random.Range(0, possibleItems.Count);
         itemToSpawn = possibleItems[rand];
-
+        
         //canvas.enabled = true;
         //image.GetComponent<Image>().sprite = itemToSpawn.sprite;
         //text.text = itemToSpawn.itemName;
@@ -78,26 +82,17 @@ public class BallManager : MonoBehaviour
     public void AddToInventory(ItemData item)
     {
         bool isInInventory = false;
-        int indexToUse = 0;
-        int i = 0;
-        foreach (Inventory.InventoryItem invItem in inventoryComponent.inventory)
-        {
-            if (inventoryComponent.inventory[i].itemName == "")
+        indexToUse = 0;
+        isInInventory = CheckIfInInventory(item);
 
-            {
-                indexToUse = i;
-                break;
-            }
-            else
-            {
-                if (invItem.itemName == item.itemName)
-                {
-                    isInInventory = true;
-                    indexToUse = i;
-                    break;
-                }
-            }
-            i++;
+        while (isInInventory && item.isLegendary)
+        {
+            Debug.Log(item.itemName + " Is already in inventory.");
+            rand = Random.Range(0, possibleItems.Count);
+            itemToSpawn = possibleItems[rand];
+            item = itemToSpawn.GetComponent<ItemData>();
+            isInInventory = CheckIfInInventory(item);
+
         }
 
         if (!isInInventory)
@@ -115,5 +110,30 @@ public class BallManager : MonoBehaviour
         //{
         //    Debug.Log("Inventory Slot: " + g.ToString() + " Item name: " + inventoryComponent.inventory[g].itemName + " Quantity: " +  inventoryComponent.inventory[g].quantity);
         //}
+    }
+
+    bool CheckIfInInventory(ItemData item)
+    {
+        int i = 0;
+        foreach (Inventory.InventoryItem invItem in inventoryComponent.inventory)
+        {
+            if (inventoryComponent.inventory[i].itemName == "")
+
+            {
+                indexToUse = i;
+                return false;
+            }
+            else
+            {
+                if (invItem.itemName == item.itemName)
+                {
+                    
+                    indexToUse = i;
+                    return true;
+                }
+            }
+            i++;
+        }
+        return false;
     }
 }

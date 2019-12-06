@@ -45,11 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Mind Plate
   isLegendary: 1
-  legendaryPKMN: 493
-  twoLegends: 0
-  legendaryPKMNTwo: 0
-  threeLegends: 0
-  legendaryPKMNThree: 0
   ball: Premier
   sprite: {fileID: -526213612406822765, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  itemDescription: 
+  itemDescription: A plate that seems to have a very specific typing.
+  isTypeSpecific: 1
+  type: Psychic
+  isSceneSpecific: 0
+  scene: 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4945446819354341921}
   - component: {fileID: 5722142590788833829}
   m_Layer: 0
-  m_Name: Red Orb
+  m_Name: RedOrb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Red Orb
   isLegendary: 1
-  legendaryPKMN: 0
   ball: Luxury
   sprite: {fileID: 5363959829771023537, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
+  itemDescription: An ancient object said to belong to a Legendary Pokemon.
+  isTypeSpecific: 0
+  type: 
+  isSceneSpecific: 0
+  scene: 

@@ -23,10 +23,14 @@ public class ItemSpawner : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
-
+        if (gameObject.transform.childCount == 0)
+        {
+            timer += Time.deltaTime;
+        }
+        
         if (timer >= timeTillSpawn && gameObject.transform.childCount == 0)
         {
+            timer = 0;
             rand = Random.Range(0, 100);
             switch(rand)
             {
@@ -59,7 +63,6 @@ public class ItemSpawner : MonoBehaviour
                     Debug.Log("Rand is not in correct bounds or something is wrong");
                     break;
             }
-            timer = 0;
         }
     }
 }

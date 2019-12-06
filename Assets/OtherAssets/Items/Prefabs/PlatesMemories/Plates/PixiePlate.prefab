@@ -45,11 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Pixie Plate
   isLegendary: 1
-  legendaryPKMN: 493
-  twoLegends: 0
-  legendaryPKMNTwo: 0
-  threeLegends: 0
-  legendaryPKMNThree: 0
   ball: Premier
   sprite: {fileID: -4804577734045501671, guid: 5cd888b177285e04e9b0fcffa3136e8e, type: 3}
-  itemDescription: 
+  itemDescription: A plate that seems to have a very specific typing.
+  isTypeSpecific: 1
+  type: Fairy
+  isSceneSpecific: 0
+  scene: 
