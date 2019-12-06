@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3744822451539935535}
   - component: {fileID: 3744822451539935528}
+  - component: {fileID: 8412502999413369473}
   m_Layer: 0
-  m_Name: GameObject (5)
-  m_TagString: Untagged
+  m_Name: Sawsbuck_Norm
+  m_TagString: pokeman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,6 +50,19 @@ MonoBehaviour:
   delay: 0
   speed: 0.5
   curChild: 0
+--- !u!65 &8412502999413369473
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744822451539935534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.618216, y: 17.803211, z: 14.517495}
+  m_Center: {x: 0.36323094, y: 8.401606, z: 0.49733973}
 --- !u!1001 &9068296191203741953
 PrefabInstance:
   m_ObjectHideFlags: 0

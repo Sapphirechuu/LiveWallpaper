@@ -176,7 +176,7 @@ public class Spawner : MonoBehaviour
                             }
                         }
 
-                        if (objectPool.Count <= 1 || allNocturnal)
+                        if (objectPool.Count <= 1 || allNocturnal && daylight.day)
                         {
                             canSpawn = false;
                             break;
@@ -207,7 +207,7 @@ public class Spawner : MonoBehaviour
                             }
                         }
 
-                        if (objectPool.Count <= 1 || allDiurnal)
+                        if ((objectPool.Count <= 1 || allDiurnal) && daylight.night)
                         {
                             canSpawn = false;
                             break;
