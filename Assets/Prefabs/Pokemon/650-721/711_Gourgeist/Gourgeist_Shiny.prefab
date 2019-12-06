@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5048295689275775161}
   - component: {fileID: 5953304084096789778}
   m_Layer: 0
-  m_Name: Gourgeist_Norm 1
+  m_Name: Gourgeist_Shiny
   m_TagString: pokeman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,8 +45,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.73612, y: 10.942728, z: 4.5076303}
+  m_Center: {x: 0.12549448, y: 4.971364, z: 0.0031590462}
 --- !u!54 &5048295689275775161
 Rigidbody:
   m_ObjectHideFlags: 0

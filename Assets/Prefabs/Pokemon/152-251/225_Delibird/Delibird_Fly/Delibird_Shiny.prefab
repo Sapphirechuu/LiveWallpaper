@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7174150735701303715}
   - component: {fileID: 8583562638691587080}
   m_Layer: 0
-  m_Name: Delibird_Norm 1
+  m_Name: Delibird_Shiny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,8 +45,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 7.936602, y: 10.866556, z: 9.763666}
+  m_Center: {x: 0.29909253, y: 4.933278, z: 0.5686667}
 --- !u!54 &7174150735701303715
 Rigidbody:
   m_ObjectHideFlags: 0

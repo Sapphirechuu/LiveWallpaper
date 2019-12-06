@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 369398657092121459}
   - component: {fileID: 369398657092121458}
+  - component: {fileID: 4362075083894179501}
   m_Layer: 0
-  m_Name: GameObject (9)
+  m_Name: Amaura_Norm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,6 +50,19 @@ MonoBehaviour:
   delay: 0
   speed: 0.5
   curChild: 0
+--- !u!65 &4362075083894179501
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369398657092121460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.040408, y: 15.763054, z: 13.496402}
+  m_Center: {x: 0.2273345, y: 7.381527, z: 1.580441}
 --- !u!1001 &7650153689854678513
 PrefabInstance:
   m_ObjectHideFlags: 0

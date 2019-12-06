@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class LoadPoke : MonoBehaviour
 {
-
     public GameObject template;
-
-    private int curNum = 0;
-
-
-    
-
- 
+    private int curNum = 0;  
     void Update()
     {
         if (curNum < 809)
@@ -23,4 +16,4 @@ public class LoadPoke : MonoBehaviour
             cur.name = "entry " + curNum.ToString();
         }
     }
-}
+} 
