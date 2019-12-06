@@ -36,6 +36,7 @@ public class PokeDex : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "pokeman")
                 {
+                    Debug.Log(hit.collider.gameObject.name);
                     if (!hit.collider.gameObject.transform.GetChild(0).GetComponent<PokemonData>().captured)
                     {
                         PokemonData pokemonHit = hit.collider.gameObject.transform.GetChild(0).GetComponent<PokemonData>();

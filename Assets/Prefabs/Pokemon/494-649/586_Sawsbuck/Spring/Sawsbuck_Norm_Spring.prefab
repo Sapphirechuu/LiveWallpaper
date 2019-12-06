@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3744822451539935528}
   - component: {fileID: 2592715429673599708}
   - component: {fileID: 9016523058131755361}
+  - component: {fileID: -4146408034597344527}
   m_Layer: 0
   m_Name: Sawsbuck_Norm_Spring
-  m_TagString: Untagged
+  m_TagString: pokeman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,6 +78,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.618216, y: 17.803211, z: 14.517495}
   m_Center: {x: 0.36323094, y: 8.401606, z: 0.49733973}
+--- !u!54 &-4146408034597344527
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3744822451539935534}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &9068296191203741953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,6 +194,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3744822451539935534, guid: 2cce49e022520fa438bf5b7f85e01cac,
         type: 3}
+    - target: {fileID: 8988976539982201689, guid: fbc00fc5c59c3444d8261e88017c6371,
+        type: 3}
+      propertyPath: rarity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbc00fc5c59c3444d8261e88017c6371, type: 3}
 --- !u!4 &8539665895793117680 stripped

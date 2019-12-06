@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5111228063871553126}
   m_Layer: 0
   m_Name: Snorunt_Norm
-  m_TagString: Untagged
+  m_TagString: pokeman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,6 +156,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.10000006
+      objectReference: {fileID: 0}
+    - target: {fileID: -7010719812045076036, guid: a2dff792747018945a0647e5d70618de,
+        type: 3}
+      propertyPath: rarity
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2dff792747018945a0647e5d70618de, type: 3}
