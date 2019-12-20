@@ -21,6 +21,7 @@ public class Spawner : MonoBehaviour
 
     public PokeDex dex;
 
+    private Tracking info;
     //Which path to take in scene
     public int pathToTake;
     
@@ -53,7 +54,7 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        
+        info = GameObject.Find("TrackingManager").GetComponent<Tracking>();
 
     }
 
@@ -310,11 +311,13 @@ public class Spawner : MonoBehaviour
                         {
                             dex.theDex[pokemonData.pokeNum].ShiniesSeen++;
                             dex.theDex[pokemonData.pokeNum].Seen = true;
+                            info.TrackIntEvent(pokemonData.pokeNum + "ShinySeen", 1);
                         }
                         else
                         {
                             dex.theDex[pokemonData.pokeNum].Seen = true;
                             dex.theDex[pokemonData.pokeNum].NormalSeen++;
+                            info.TrackIntEvent(pokemonData.pokeNum + "NormalSeen", 1);
                         }
 
 

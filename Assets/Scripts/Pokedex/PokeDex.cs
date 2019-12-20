@@ -9,6 +9,7 @@ public class PokeDex : MonoBehaviour
 {
     public Camera mainCamera;
     public List<PokeDexEntry> theDex;
+    public Tracking info;
 
     private string filePath = "/poke.dat";
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class PokeDex : MonoBehaviour
             theDex[i].PokeNumber = i;
         }
         LoadTheDex();
+        info = GameObject.Find("TrackingManager").GetComponent<Tracking>();
     }
 
     // Update is called once per frame
@@ -46,11 +48,13 @@ public class PokeDex : MonoBehaviour
                             theDex[pokemonHit.pokeNum].Captured = true;
                             theDex[pokemonHit.pokeNum].ShinyCaptured = true;
                             theDex[pokemonHit.pokeNum].ShiniesCaught++;
+                            info.TrackIntEvent(pokemonHit.pokeNum + "ShinyCaught", 1);
                         }
                         else
                         {
                             theDex[pokemonHit.pokeNum].Captured = true;
                             theDex[pokemonHit.pokeNum].NormalCaught++;
+                            info.TrackIntEvent(pokemonHit.pokeNum + "NormalCaught", 1);
                         }
                     }
                 }

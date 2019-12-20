@@ -55,9 +55,9 @@ public class Tracking : MonoBehaviour
         sceneTimes.Add(new FloatEvent(currentScene));
 
         
-        Debug.Log(DateTime.Now.ToString("hhmmss"));
+       // Debug.Log(DateTime.Now.ToString("hhmmss"));
         
-        Debug.Log(DateTime.Today.Minute.ToString());
+        //Debug.Log(DateTime.Today.Minute.ToString());
     
 
 
