@@ -204,7 +204,19 @@ public class Tracking : MonoBehaviour
     private void SaveTime()
     {
         string path = Application.persistentDataPath + "/TotalTime.txt";
-        File.AppendAllText(path, totalGameTime.ToString() + ",");
+        if (File.Exists(path))
+        {
+            File.AppendAllText(path, "," + totalGameTime.ToString());
+        }
+        else
+        {
+            File.AppendAllText(path, totalGameTime.ToString());
+        }
+
+        
+
+        
+
     }
     
 }

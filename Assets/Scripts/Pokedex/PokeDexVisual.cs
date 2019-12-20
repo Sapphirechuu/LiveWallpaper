@@ -16,9 +16,9 @@ public class PokeDexVisual : MonoBehaviour
     void Start()
     {
         CurrentDex = GameObject.Find("Manager").GetComponent<PokeDex>();
-        string[] aisgfu = AssetDatabase.FindAssets(PokeNum.ToString() + "-", new[] { "Assets/Resources/PokedexIcons/regular" });        
+        string[] sprites = UnityEditor.AssetDatabase.FindAssets(PokeNum.ToString() + "-", new[] { "Assets/Resources/PokedexIcons/regular" });        
         //Debug.Log(AssetDatabase.GUIDToAssetPath(aisgfu[0]));   
-        PokeSprite = AssetDatabase.LoadAssetAtPath<Sprite>(AssetDatabase.GUIDToAssetPath(aisgfu[0]));
+        PokeSprite = UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>(UnityEditor.AssetDatabase.GUIDToAssetPath(sprites[0]));
     }
 
     // Update is called once per frame

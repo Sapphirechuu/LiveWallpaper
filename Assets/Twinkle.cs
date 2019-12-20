@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Twinkle : MonoBehaviour
 {
-    private float start = 1.0f;
+    //private float start = 1.0f;
     private float current = 1.0f;
-    private float end = 6.0f;
+   // private float end = 6.0f;
     private SkinnedMeshRenderer lights;
     void Start()
     {
