@@ -8,7 +8,10 @@ using System.IO;
 
 public class Tracking : MonoBehaviour
 {
-
+    private void Awake()
+    {
+        GameAnalyticsSDK.GameAnalytics.Initialize();
+    }
     public float totalGameTime = 0.0f;
     private string currentScene = "";
     private int currentSceneIndex = 0;

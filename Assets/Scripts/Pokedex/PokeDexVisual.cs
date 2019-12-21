@@ -16,12 +16,14 @@ public class PokeDexVisual : MonoBehaviour
     void Start()
     {
         CurrentDex = GameObject.Find("Manager").GetComponent<PokeDex>();
-        string[] sprites = UnityEditor.AssetDatabase.FindAssets(PokeNum.ToString() + "-", new[] { "Assets/Resources/PokedexIcons/regular" });        
-        //Debug.Log(AssetDatabase.GUIDToAssetPath(aisgfu[0]));   
-        PokeSprite = UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>(UnityEditor.AssetDatabase.GUIDToAssetPath(sprites[0]));
+        //string[] sprites = AssetDatabase.FindAssets(PokeNum.ToString() + "-", new[] { "Assets/Resources/PokedexIcons/regular" });        
+
+        //PokeSprite = AssetDatabase.LoadAssetAtPath<Sprite>(AssetDatabase.GUIDToAssetPath(sprites[0]));
+
+        PokeSprite = Resources.Load<Sprite>("PokedexIcons/regular/4-charmander");
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
         if (!initalSet)

@@ -52,8 +52,8 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(int sceneNum)
     {
-        if (sceneNum <= EditorBuildSettings.scenes.Length - 1)
-        {
+        if (sceneNum <= /*EditorBuildSettings.scenes.Length - 1*/2)
+        {            
             scene = sceneNum;
         }
         else
