@@ -81,7 +81,6 @@ public class TimeBasedEvent : MonoBehaviour
         {
             eventTriggered = true;
             Instantiate(scriptToCall);
-            Debug.Log("Do the things");
         }
     }
 }
