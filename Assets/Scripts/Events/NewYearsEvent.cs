@@ -86,7 +86,7 @@ public class NewYearsEvent : MonoBehaviour
         WaitForSeconds wait = new WaitForSeconds(delay);
         foreach (GameObject pokemon in pokemonToSpawn)
         {
-            GameObject instance = Instantiate(pokemon/*, gameObject.transform*/);
+            GameObject instance = Instantiate(pokemon, gameObject.transform);
             if (instance.GetComponent<SmoothMovment>().enabled)
             {
                 instance.GetComponent<SmoothMovment>().enabled = false;

@@ -80,7 +80,7 @@ public class TimeBasedEvent : MonoBehaviour
         if (DateTime.Now.ToString() == goalTime && !eventTriggered)
         {
             eventTriggered = true;
-            Instantiate(scriptToCall);
+            Instantiate(scriptToCall, gameObject.transform);
         }
     }
 }
