@@ -70,7 +70,6 @@ public class SmoothMovment : MonoBehaviour {
                 {
                     Destroy(gameObject);
                     Destroy(camerTarget.gameObject);
-                    Debug.Log("finished");
                 }
             }
             else

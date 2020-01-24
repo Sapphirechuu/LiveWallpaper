@@ -154,7 +154,6 @@ public class Spawner : MonoBehaviour
                 //If the chance = 1, spawn the pokemon
                 if (randSpawnChance == 1)
                 {
-                    Debug.Log("Spawned");
                     //Set the rand variable based on the spawnPool count
                     int rand = Random.Range(0, spawnPool.Count);
                     //The spawned object is equal to the index of the spawn pool at the rand variable
@@ -356,7 +355,6 @@ public class Spawner : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Did not spawn");
                     spawnTimer = 0;
                 }
                 
